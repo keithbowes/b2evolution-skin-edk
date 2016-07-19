@@ -56,7 +56,7 @@ function edk_css_include()
 	);
 	$old_locale = setlocale(LC_ALL, 0);
 	setlocale(LC_ALL, $locales_to_try);
-	uasort($alternate_styles, function($a, $b) { return strcmp($a['title'], $b['title']); });
+	uasort($alternate_styles, 'sort_styles');
 	setlocale(LC_ALL, $old_locale);
 
 	foreach ($alternate_styles as $style)
@@ -180,6 +180,11 @@ function get_other_blogs()
 	}
 
 	return $blogs;
+}
+
+function sort_styles($a, $b)
+{
+	return strcmp($a['title'], $b['title']);
 }
 
 
