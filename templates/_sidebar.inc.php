@@ -133,10 +133,10 @@ if (class_exists('DOMDocument'))
 			for ($i = 0; $i < $rows->length; $i++)
 			{
 				$cpod = $rows->item($i)->getElementsbyTagName('td')->item(0)->getElementsByTagName('a')->item(0)->getAttribute('href');
-				if (strpos($cpod, 'https') === 0)
+				if (preg_match(',^.*(https://.+)$,', $cpod, $matches))
 				{
-					$pods[$pi] = $cpod;
-					@fwrite($fh, $cpod . "\n");
+					$pods[$pi] = $matches[1];
+					@fwrite($fh, $pods[$pi] . "\n");
 					$pi++;
 				}
 			}
