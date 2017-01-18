@@ -189,7 +189,7 @@ function sort_styles($a, $b)
 
 
 global $edk_base, $skin;
-$edk_base = $Blog->get_local_skins_url().$skin.'/';
+$edk_base = $Blog->get_local_skins_url('basic').$skin.'/';
 
 init_content_type();
 skin_content_header($content_type);
@@ -231,7 +231,7 @@ $params = array_merge( array(
 
 	global $cookie_path;
 	add_js_headline('var cookie_path = "' .  $cookie_path . '";');
-	require_js($edk_base . 'js/styleprefs.js', NULL, TRUE);
+	require_js($edk_base . 'js/styleprefs.js', TRUE);
 
 	if (prefers_xhtml())
 		add_headline(sprintf('<link rel="jslicense" href="%s" title="%s" />', $Skin->T_('https://www.gnu.org/licenses/lgpl-3.0.en.html'), $Skin->T_('GNU General Public License Version 3')));
