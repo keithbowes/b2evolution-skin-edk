@@ -38,7 +38,7 @@ div[role="article"] {
 
 #nav ul a.user,
 #nav ul span.user {
-  display: inline-block;
+  display: inline flow-root;
   padding-top: 0.5em;
 }
 

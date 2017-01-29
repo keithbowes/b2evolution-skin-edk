@@ -79,7 +79,7 @@ h3 {
 
 h3:not(.storytitle) + div a,
 h3 + p a {
-  display: inline-block;
+  display: inline flow-root;
   margin: 0.5em 0.1em !important;
 }
 
@@ -415,7 +415,7 @@ table summary {
 }
 
 .button {
-  display: inline-block;
+  display: inline flow-root;
   font-family: sans-serif;
   font-size: 0.7em;
   font-weight: bold;
@@ -537,7 +537,7 @@ table summary {
 
 .sago {
   bottom: 0.2em;
-  display: inline-block;
+  display: inline flow-root;
   position: relative;
 }
 
@@ -564,7 +564,7 @@ table summary {
 }
 
 .tag-list li {
-  display: inline-block;
+  display: inline;
   font-size: inherit;
   text-transform: capitalize;
 }
