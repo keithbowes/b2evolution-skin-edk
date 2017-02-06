@@ -1,6 +1,6 @@
 <!-- begin sidebar -->
 <?php
-	global $baseurl, $show_mode;
+	global $baseurl;
 	/* Make sure the sidebar uses the blog's locale insted of the locale of the bottom post */
 	locale_temp_switch($Blog->locale);
 ?>

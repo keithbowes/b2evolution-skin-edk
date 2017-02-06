@@ -25,24 +25,8 @@ if (param('delete_cookies'))
 	delete_cookies();
 }
 
-$show_mode = param('show', 'string', 'post');
-
-/* Output the end of HTML */
-function end_html()
-{
-	skin_include( 'templates/_sidebar.inc.php' );
-	skin_include( 'templates/_html_footer.inc.php' );
-}
-
 skin_include( 'templates/_html_header.inc.php' );
-
 $footer_elem = prefers_xhtml() ? 'div' : 'footer';
-
-if (is_text_browser() && 'menu' == $show_mode)
-{
-	end_html();
-	return;
-}
 
 display_if_empty();
 while( $Item = & mainlist_get_item() ):
@@ -58,12 +42,10 @@ $_item_url = get_tinyurl();
 	<div class="meta"><?php get_meta($Item); ?></div>
 
 <?php
-if ($show_mode != 'comments')
+global $first_item, $last_item, $next_item, $prev_item;
+if ((!prefers_xhtml() && !supports_link_toolbar()) && 'single' == $disp &&
+	(NULL !== $first_item || NULL !== $last_item || NULL !== $next_item || NULL !== $prev_item))
 {
-	global $first_item, $last_item, $next_item, $prev_item;
-	if ((!prefers_xhtml() && !supports_link_toolbar()) && 'single' == $disp &&
-		(NULL !== $first_item || NULL !== $last_item || NULL !== $next_item || NULL !== $prev_item))
-	{
 ?>
 <div id="prevnext">
 <?php
@@ -103,7 +85,7 @@ if ($show_mode != 'comments')
 </div>
 
 <?php
-	}
+}
 ?>
 
 <div class="storycontent">
@@ -126,18 +108,16 @@ if ($show_mode != 'comments')
 			'link_anchor_one' => '',
 			'link_anchor_zero' => '',
 			'link_before' => '<div class="postmetadata">',
-				'show_in_single_mode' => !empty($show_mode),
-				'type' => 'comments',
-				'url' => $Item->get_feedback_url() . '?show=comments&amp;redir=no#comments',
+			'type' => 'comments',
+			'url' => $Item->get_feedback_url() . '#comments',
 			)
 		);
-}
 ?>
 
 	</div>
 <?php
 
-if ($show_mode != 'post') skin_include( 'templates/_item_feedback.inc.php');
+skin_include( 'templates/_item_feedback.inc.php');
 endwhile;
 
 skin_include('$disp$', array(
@@ -175,6 +155,6 @@ if ($MainList)
 </section>
 
 <?php
-if (!is_text_browser() || 'menu' == $disp)
-	end_html();
+	skin_include( 'templates/_sidebar.inc.php' );
+	skin_include( 'templates/_html_footer.inc.php' );
 ?>

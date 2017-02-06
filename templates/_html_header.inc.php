@@ -246,13 +246,12 @@ $params = array_merge( array(
 
 	if (prefers_xhtml() || supports_link_toolbar())
 	{
-		$comment_args = is_text_browser() ? '?show=menu&amp;redir=no' : '';
 		add_headline(sprintf('<link rel="bookmark" href="%s#content" title="%s" />', $canonical_url, $Skin->T_('Main Content')));
-		add_headline(sprintf('<link rel="bookmark" href="%s%s#menu" title="%s" />', $canonical_url, $comment_args, $Skin->T_('Menu')));
+		add_headline(sprintf('<link rel="bookmark" href="%s#menu" title="%s" />', $canonical_url, $Skin->T_('Menu')));
 
 if ('single' == $disp)
 		{
-  add_headline(sprintf('<link rel="bookmark" href="%s?show=comments&amp;redir=no#comments" title="%s" />', htmlspecialchars($_SERVER['REQUEST_URI']), __('Comments')));
+  add_headline(sprintf('<link rel="bookmark" href="%s#comments" title="%s" />', htmlspecialchars(get_full_url()), __('Comments')));
 		}
   add_headline(sprintf('<link rel="top" href="%sdefault.php" title="%s" />', $baseurl, __('Go back to home page')));
 

@@ -96,7 +96,7 @@ echo $params['comment_title_before'];
 									$refname = $row[3];
 							}
 						}
-						$after_user_text = sprintf($Skin->T_(' (in response to <a href="%s">%s</a>)'), htmlentities($_SERVER['REQUEST_URI']) . '#c' . $refcomment, $refname);
+						$after_user_text = sprintf($Skin->T_(' (in response to <a href="%s">%s</a>)'), htmlentities(get_full_url()) . '#c' . $refcomment, $refname);
 					} else $after_user_text = '';
 
 					// Normal comment
