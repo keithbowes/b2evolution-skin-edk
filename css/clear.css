@@ -42,6 +42,39 @@ div[role="article"] {
   padding-top: 0.5em;
 }
 
+.bCalendarTable {
+  background-color: transparent;
+  border: none !important;
+}
+
+.bCalendarTable caption {
+  font-weight: normal !important;
+  margin: 0 0 0 2ex !important;
+  text-align: left !important;
+}
+
+.bCalendarTable tbody,
+.bCalendarTable thead,
+.bCalendarTable tfoot [class] {
+  display: none !important;
+}
+
+.bCalendarTable tfoot td {
+  padding: 0 !important;
+}
+
+.bCalendarTable tfoot td a:after {
+  content: " " attr(title);
+}
+
+.bCalendarTable tfoot tr td,
+.bCalendarTable tfoot tr td a {
+  clear: left;
+  float: left;
+  font-size: 1em;
+  line-height: 0.5em;
+}
+
 .help-inline {
   color: inherit;
 }
