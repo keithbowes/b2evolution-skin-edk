@@ -15,21 +15,6 @@ function _t($str)
 	return NT_($str);
 }
 
-function delete_cookies()
-{
-	global $Skin;
-	global $collection_path;
-	$deleted = FALSE;
-	foreach ($_COOKIE as $cookie => $cval)
-	{
-		$deleted = TRUE;
-		printf($Skin->T_("Deleting cookie %s.<br />\n"), $cookie);
-		setcookie($cookie, NULL, -1, $collection_path);
-	}
-	echo $deleted ? $Skin->T_('Cookies deleted!') : $Skin->T_('There were no cookies to delete.');
-	exit;
-}
-
 global $diaspora_api;
 function diaspora_init()
 {
@@ -381,7 +366,6 @@ function show_footer()
 
 	printf($Skin->T_('<div>Powered by <cite><a href="http://www.duckduckgo.com/?q=!+%1$s">%1$s</a> %2$s</cite>.</div>'), $app_name, $app_version);
 	printf('<div id="copyright">%s</div>', get_copyright(array('display' => FALSE)));
-	echo '<div id="cookiepolicy">' . $Skin->T_('This site uses <a href="http://en.wikipedia.org/wiki/HTTP_cookie">cookies</a>.') . ' <a href="' . $Blog->get('url') . '?delete_cookies=1&amp;redir=no">' . $Skin->T_('Delete Cookies!') . '</a></div>' . "\n";
 }
 
 function supports_link_toolbar()

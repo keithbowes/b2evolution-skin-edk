@@ -20,11 +20,6 @@ if ($diaspora_pod)
 	diaspora_share();
 }
 
-if (param('delete_cookies'))
-{
-	delete_cookies();
-}
-
 skin_include( 'templates/_html_header.inc.php' );
 $footer_elem = prefers_xhtml() ? 'div' : 'footer';
 

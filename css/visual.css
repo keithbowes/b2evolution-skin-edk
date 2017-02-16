@@ -171,6 +171,11 @@ table summary {
   margin-top: 0.2em;
 }
 
+#eu_cookie_consent {
+  padding: 0.8% 2.5% !important;
+  width: 95% !important;
+}
+
 #facebook {
   background-color: #3b5998 !important;
   border-color: black;

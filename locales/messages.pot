@@ -1,14 +1,14 @@
 # edk - Language file
-# Copyright (C) 2016 Keith
+# Copyright (C) 2017 Keith Bowes
 # This file is distributed under the same license as the edk package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: edk \n"
+"Project-Id-Version: edk 0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 18:50-0400\n"
+"POT-Creation-Date: 2017-02-16 00:35-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,128 +30,107 @@ msgstr ""
 msgid "404 Not Found"
 msgstr ""
 
-#: templates/_funcs.inc.php:26
-#, php-format
-msgid "Deleting cookie %s.<br />\n"
-msgstr ""
-
-#: templates/_funcs.inc.php:29
-msgid "Cookies deleted!"
-msgstr ""
-
-#: templates/_funcs.inc.php:29
-msgid "There were no cookies to delete."
-msgstr ""
-
-#. TRANS: Params: Start year, end year, author, license
-#: templates/_funcs.inc.php:86
+#. TRANS: Params: Start year, end year, license
+#: templates/_funcs.inc.php:71
 #, php-format
 msgid "(C) %1$d-%2$d under %3$s"
 msgstr ""
 
-#. TRANS: Params: Start year, end year, author
-#: templates/_funcs.inc.php:88
+#. TRANS: Params: Start year, end year
+#: templates/_funcs.inc.php:73
 #, php-format
 msgid "(C) %1$d-%2$d"
 msgstr ""
 
-#: templates/_funcs.inc.php:153
+#: templates/_funcs.inc.php:134
 msgid "Attribution, Sharealike license"
 msgstr ""
 
-#: templates/_funcs.inc.php:153
+#: templates/_funcs.inc.php:134
 msgid "BY-SA"
 msgstr ""
 
-#: templates/_funcs.inc.php:153
+#: templates/_funcs.inc.php:134
 msgid "C<span class=\"button-sf\">reative </span>C<span class=\"button-sf\">ommons</span>"
 msgstr ""
 
-#: templates/_funcs.inc.php:153 templates/_funcs.inc.php:155
+#: templates/_funcs.inc.php:134 templates/_funcs.inc.php:136
 msgid "Creative Commons"
 msgstr ""
 
 #. TRANS: The last two %s are icons
-#: templates/_funcs.inc.php:165
+#: templates/_funcs.inc.php:146
 #, php-format
 msgid "Posted in %s by <a href=\"%s\">%s</a> on %s at %s %s %s"
 msgstr ""
 
-#: templates/_funcs.inc.php:376
+#: templates/_funcs.inc.php:367
 #, php-format
 msgid "<div>Powered by <cite><a href=\"http://www.duckduckgo.com/?q=!+%1$s\">%1$s</a> %2$s</cite>.</div>"
 msgstr ""
 
-#: templates/_funcs.inc.php:378
-msgid "Delete Cookies!"
-msgstr ""
-
-#: templates/_funcs.inc.php:378
-msgid "This site uses <a href=\"http://en.wikipedia.org/wiki/HTTP_cookie\">cookies</a>."
-msgstr ""
-
-#: templates/_html_header.inc.php:27
-msgid "Clear Look"
-msgstr ""
-
-#: templates/_html_header.inc.php:32
-msgid "One-column Look"
-msgstr ""
-
-#: templates/_html_header.inc.php:37
+#: templates/_html_header.inc.php:28
 msgid "Classic Look"
 msgstr ""
 
-#: templates/_html_header.inc.php:42
+#: templates/_html_header.inc.php:32
+msgid "Clear Look"
+msgstr ""
+
+#: templates/_html_header.inc.php:36
+msgid "One-column Look"
+msgstr ""
+
+#: templates/_html_header.inc.php:40
 msgid "Transitional Look"
 msgstr ""
 
-#: templates/_html_header.inc.php:229
+#: templates/_html_header.inc.php:222
 msgid "Please leave this for stats"
 msgstr ""
 
-#: templates/_html_header.inc.php:247
+#: templates/_html_header.inc.php:237
 msgid "GNU General Public License Version 3"
 msgstr ""
 
-#: templates/_html_header.inc.php:247
+#: templates/_html_header.inc.php:237
 msgid "https://www.gnu.org/licenses/lgpl-3.0.en.html"
 msgstr ""
 
-#: templates/_html_header.inc.php:253
+#: templates/_html_header.inc.php:243
 msgid "Canonical Permalink"
 msgstr ""
 
-#: templates/_html_header.inc.php:254
+#: templates/_html_header.inc.php:244
 msgid "Shortened Permalink"
 msgstr ""
 
-#: templates/_html_header.inc.php:260
+#: templates/_html_header.inc.php:249
 msgid "Main Content"
 msgstr ""
 
-#: templates/_html_header.inc.php:261
+#: templates/_html_header.inc.php:250
 msgid "Menu"
 msgstr ""
 
-#: templates/_item_comment.inc.php:78
+#: templates/_item_comment.inc.php:99
 #, php-format
 msgid " (in response to <a href=\"%s\">%s</a>)"
 msgstr ""
 
-#: templates/_item_comment.inc.php:84
+#: templates/_item_comment.inc.php:105
 msgid "from"
 msgstr ""
 
-#: templates/_item_comment.inc.php:135
+#: templates/_item_comment.inc.php:186
 msgid " at "
 msgstr ""
 
-#: templates/_item_comment_form.inc.php:278
+#: templates/_item_comment_form.inc.php:288
 msgid "<a href=\"http://en.wikipedia.org/wiki/Markdown\">Markdown</a> is enabled."
 msgstr ""
 
-#: templates/_item_comment_form.inc.php:286
+#: templates/_item_comment_form.inc.php:296
 msgid "<a href=\"http://en.wikipedia.org/wiki/BBCode\">BBCode</a> is enabled."
 msgstr ""
 
@@ -181,72 +160,26 @@ msgstr ""
 msgid "Share on Twitter"
 msgstr ""
 
-#: templates/_sidebar.inc.php:250
+#: templates/_sidebar.inc.php:251
 msgid "Select a pod to use above or enter one below."
 msgstr ""
 
-#: templates/_sidebar.inc.php:268
+#: templates/_sidebar.inc.php:269
 msgid "Diaspora* user name"
 msgstr ""
 
-#: templates/_sidebar.inc.php:275
+#: templates/_sidebar.inc.php:276
 msgid "Diaspora* password"
 msgstr ""
 
-#: templates/_sidebar.inc.php:281
+#: templates/_sidebar.inc.php:282
 msgid "Diaspora* aspects"
 msgstr ""
 
-#: templates/_sidebar.inc.php:295 templates/_sidebar.inc.php:296
+#: templates/_sidebar.inc.php:296 templates/_sidebar.inc.php:297
 msgid "Share on Diaspora*"
 msgstr ""
 
-#: templates/_sidebar.inc.php:320
+#: templates/_sidebar.inc.php:321
 msgid "Back-office"
-msgstr ""
-
-#: templates/_user.disp.php:43
-msgid "Edit this user in the Back-office"
-msgstr ""
-
-#: templates/_user.disp.php:132
-msgid "Not activated"
-msgstr ""
-
-#: templates/_user.disp.php:139
-msgid "First Name"
-msgstr ""
-
-#: templates/_user.disp.php:144
-msgid "Last Name"
-msgstr ""
-
-#: templates/_user.disp.php:175
-#, php-format
-msgid "from %d to %d years old"
-msgstr ""
-
-#: templates/_user.disp.php:224
-#, php-format
-msgid "You and %s..."
-msgstr ""
-
-#: templates/_user.disp.php:237
-msgid "Unblock"
-msgstr ""
-
-#: templates/_user.disp.php:237
-msgid "You have blocked this user"
-msgstr ""
-
-#: templates/_user.disp.php:273
-msgid "You can organize your contacts into groups. You can decide in which groups to put this user here:"
-msgstr ""
-
-#: templates/_user.disp.php:278
-msgid "Create a new group"
-msgstr ""
-
-#: templates/_user.disp.php:282
-msgid "Add this user to a group"
 msgstr ""
