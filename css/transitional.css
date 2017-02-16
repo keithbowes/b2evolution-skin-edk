@@ -137,6 +137,10 @@ input[type="search"]:hover {
   white-space: nowrap;
 }
 
+#diaspform * {
+  white-space: normal !important;
+}
+
 #facebook {
   margin-top: -0.1em;
 }
@@ -246,6 +250,7 @@ input[type="search"]:hover {
 
 .search_submit {
   font-size: 0.7em;
+  margin-left: 0.2em;
 }
 
 .storytitle {
