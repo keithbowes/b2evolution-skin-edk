@@ -56,7 +56,7 @@ function edk_css_include()
 	);
 	$old_locale = setlocale(LC_ALL, 0);
 	setlocale(LC_ALL, $locales_to_try);
-	uasort($alternate_styles, 'sort_styles');
+	uasort($alternate_styles, function($a, $b) { return strcmp($a['title'], $b['title']); });
 	setlocale(LC_ALL, $old_locale);
 
 	foreach ($alternate_styles as $style)
@@ -75,7 +75,7 @@ function edk_css_include()
 	/* Determine the default style sheet from the Default-Style cookie if available.
 	 * If not, use the above arrays. */
 	if (isset($_COOKIE['Default-Style']))
-		$default_style = preg_replace('/\?.+$/', '', $_COOKIE['Default-Style']);
+		$default_style = $_COOKIE['Default-Style'];
 	else
 	{
 		global $Session;
@@ -181,12 +181,6 @@ function get_other_blogs()
 
 	return $blogs;
 }
-
-function sort_styles($a, $b)
-{
-	return strcmp($a['title'], $b['title']);
-}
-
 
 global $edk_base, $skin;
 $edk_base = $Blog->get_local_skins_url('basic').$skin.'/';

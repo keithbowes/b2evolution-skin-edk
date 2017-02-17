@@ -25,3 +25,7 @@ body.disp_single #nav {
 .storytitle {
   text-align: center;
 }
+
+.search_submit {
+  margin-top: 0.2em;
+}

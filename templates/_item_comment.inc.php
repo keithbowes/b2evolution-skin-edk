@@ -73,10 +73,7 @@ echo $params['comment_title_before'];
 				{
 					global $DB;
 					$DB->query('SELECT comment_in_reply_to_cmt_ID FROM T_comments WHERE comment_ID=' . $Comment->ID);
-					/* Older versions of PHP don't support $var = $DB->get_row(...)[0]
-					 * So I'm using the intermediate $row variable as a workaround */
-					$row = $DB->get_row(NULL, ARRAY_N);
-					$refcomment = $row[0];
+					$refcomment = $DB->get_row(NULL, ARRAY_N)[0];
 
 					if (0 != $refcomment)
 					{
@@ -85,8 +82,7 @@ echo $params['comment_title_before'];
 						$refname = $row[0];
 						if (!$refname)
 						{
-							$refid = $row[1];
-							$DB->query('SELECT user_nickname, user_firstname, user_lastname, user_login FROM T_users WHERE user_ID=' . $refid);
+							$DB->query('SELECT user_nickname, user_firstname, user_lastname, user_login FROM T_users WHERE user_ID=' . $row[1]);
 							$row = $DB->get_row(NULL, ARRAY_N, 0);
 							$refname = $row[0];
 							if (!$refname)

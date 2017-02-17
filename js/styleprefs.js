@@ -20,11 +20,12 @@ function saveDefaultStyleSheet(e)
     if ('beforeunload' == e.type)
     {
       /* Set the cookie */
-      /* The cookie expires in one week */
+      /* The cookie expires in thirty days */
       var date = new Date();
-      var expiry = new Date(date.setTime(date.getTime() + 7 * 24 * 60 * 60 * 1000)).toUTCString();
+      var expiry = new Date(date.setTime(date.getTime() + 30 * 24 * 60 * 60 * 1000)).toUTCString();
 
-      document.cookie = 'Default-Style=' + selected_style + '; expires=' + expiry + '; path=' + cookie_path;
+      document.cookie = 'Default-Style=' + selected_style.replace(/\?.+$/, '') +
+				'; expires=' + expiry + '; path=' + cookie_path;
     }
   }
   else if ('load' == e.type)
