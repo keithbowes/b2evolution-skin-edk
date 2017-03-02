@@ -245,7 +245,7 @@ $params = array_merge( array(
 
 if ('single' == $disp)
 		{
-  add_headline(sprintf('<link rel="bookmark" href="%s#comments" title="%s" />', htmlspecialchars(get_full_url()), __('Comments')));
+  add_headline(sprintf('<link rel="bookmark" href="%s#comments" title="%s" />', $canonical_url, __('Comments')));
 		}
   add_headline(sprintf('<link rel="top" href="%sdefault.php" title="%s" />', $baseurl, __('Go back to home page')));
 

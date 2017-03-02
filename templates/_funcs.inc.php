@@ -80,7 +80,7 @@ function get_copyright($params = array())
 /* Get the DB info about the first or last item of the current blog.
  * If you can think of a better way to do this, you're my hero.
  *
- * @param string The direction to go. Can be ASC (ascending) for the first item or DESC  (descending) for the last item.
+ * @param string The direction to go. Can be ASC (ascending) for the first item or DESC (descending) for the last item.
  * @return array An array containing the DB fields.
  */
 function get_item($dir)
@@ -142,9 +142,10 @@ function get_meta($Item)
 	$flag = strpos($f = locale_flag($Item->locale, 'h10px', 'flag' , '', FALSE),
 		'background-position') !== FALSE ? $f : '';
 
+	echo $Skin->T_('Posted in ');
+	$Item->categories();
 	# TRANS: The last two %s are icons	
-	printf($Skin->T_('Posted in %s by <a href="%s">%s</a> on %s at %s %s %s'),
-		$Item->categories(array('display' => FALSE)),
+	printf($Skin->T_(' by <a href="%s">%s</a> on %s at %s %s %s'),
 		$Item->get_creator_User()->url,
 		$Item->get_creator_User()->firstname,
 		$Item->get_issue_date(),

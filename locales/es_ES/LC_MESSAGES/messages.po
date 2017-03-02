@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: b 2e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-16 00:35-0500\n"
-"PO-Revision-Date: 2017-02-16 00:36-0500\n"
+"POT-Creation-Date: 2017-03-01 21:37-0500\n"
+"PO-Revision-Date: 2017-03-01 21:36-0500\n"
 "Last-Translator: Keith Bowes <keith@localhost>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES \n"
@@ -53,13 +53,17 @@ msgstr "C<span class=\"button-sf\">reative </span>C<span class=\"button-sf\">omm
 msgid "Creative Commons"
 msgstr "Licencia Creative Commons"
 
-# TRANS: The last two %s are icons
-#: templates/_funcs.inc.php:146
-#, php-format
-msgid "Posted in %s by <a href=\"%s\">%s</a> on %s at %s %s %s"
-msgstr "Publicado en %s por <a href=\"%s\">%s</a> en %s a las %s %s %s"
+#: templates/_funcs.inc.php:145
+msgid "Posted in "
+msgstr "Publicado en "
 
-#: templates/_funcs.inc.php:367
+# TRANS: The last two %s are icons
+#: templates/_funcs.inc.php:148
+#, php-format
+msgid " by <a href=\"%s\">%s</a> on %s at %s %s %s"
+msgstr " por <a href=\"%s\">%s</a> en %s a las %s %s %s"
+
+#: templates/_funcs.inc.php:368
 #, php-format
 msgid "<div>Powered by <cite><a href=\"http://www.duckduckgo.com/?q=!+%1$s\">%1$s</a> %2$s</cite>.</div>"
 msgstr "<div>Creado por <cite><a href=\"http://www.duckduckgo.com/?q=!+%1$s\">%1$s</a> %2$s</cite>.</div>"
@@ -80,44 +84,44 @@ msgstr "Apariencia de una sola columna"
 msgid "Transitional Look"
 msgstr "Apariencia transicional"
 
-#: templates/_html_header.inc.php:222
+#: templates/_html_header.inc.php:216
 msgid "Please leave this for stats"
 msgstr "Deje eso por estadísticas por favor"
 
-#: templates/_html_header.inc.php:237
+#: templates/_html_header.inc.php:231
 msgid "GNU General Public License Version 3"
 msgstr "Licencia Pública General de GNU, Versión 3"
 
-#: templates/_html_header.inc.php:237
+#: templates/_html_header.inc.php:231
 msgid "https://www.gnu.org/licenses/lgpl-3.0.en.html"
 msgstr "https://cdn.rawgit.com/LSLSpanish/translation_GPLv3_to_spanish/master/GPLv3-spanish.html"
 
-#: templates/_html_header.inc.php:243
+#: templates/_html_header.inc.php:237
 msgid "Canonical Permalink"
 msgstr "Permalink canónico"
 
-#: templates/_html_header.inc.php:244
+#: templates/_html_header.inc.php:238
 msgid "Shortened Permalink"
 msgstr "Permalink acortado"
 
-#: templates/_html_header.inc.php:249
+#: templates/_html_header.inc.php:243
 msgid "Main Content"
 msgstr "Contendidos principales"
 
-#: templates/_html_header.inc.php:250
+#: templates/_html_header.inc.php:244
 msgid "Menu"
 msgstr "Menú"
 
-#: templates/_item_comment.inc.php:99
+#: templates/_item_comment.inc.php:95
 #, php-format
 msgid " (in response to <a href=\"%s\">%s</a>)"
 msgstr " (en repuesta a <a href=\"%s\">%s</a>)"
 
-#: templates/_item_comment.inc.php:105
+#: templates/_item_comment.inc.php:101
 msgid "from"
 msgstr "por"
 
-#: templates/_item_comment.inc.php:186
+#: templates/_item_comment.inc.php:182
 msgid " at "
 msgstr " a los "
 

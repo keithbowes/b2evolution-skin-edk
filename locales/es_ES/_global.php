@@ -7,7 +7,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 
 $trans['es_ES'] = array(
 '__meta__' => array('format_version'=>1, 'charset'=>'utf-8'),
-'' => "Project-Id-Version: b 2e\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2017-02-16 00:35-0500\nPO-Revision-Date: 2016-06-21 18:50-0400\nLast-Translator: Keith Bowes <keith@localhost>\nLanguage-Team: Spanish\nLanguage: es_ES \nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n",
+'' => "Project-Id-Version: b 2e\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2017-03-01 21:37-0500\nPO-Revision-Date: 2017-03-01 21:36-0500\nLast-Translator: Keith Bowes <keith@localhost>\nLanguage-Team: Spanish\nLanguage: es_ES \nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n",
 '403 Forbidden' => '403 Prohibido',
 '<p><a href="%s">%s</a> cannot resolve the requested URL.</p>' => '<p><a href="%s">%s</a> no pudo resolver el pedido URL.</p>',
 '404 Not Found' => '404 No Encontrado',
@@ -17,7 +17,8 @@ $trans['es_ES'] = array(
 'BY-SA' => 'BY-SA',
 'C<span class="button-sf">reative </span>C<span class="button-sf">ommons</span>' => 'C<span class="button-sf">reative </span>C<span class="button-sf">ommons</span>',
 'Creative Commons' => 'Licencia Creative Commons',
-'Posted in %s by <a href="%s">%s</a> on %s at %s %s %s' => 'Publicado en %s por <a href="%s">%s</a> en %s a las %s %s %s',
+'Posted in ' => 'Publicado en ',
+' by <a href="%s">%s</a> on %s at %s %s %s' => ' por <a href="%s">%s</a> en %s a las %s %s %s',
 '<div>Powered by <cite><a href="http://www.duckduckgo.com/?q=!+%1$s">%1$s</a> %2$s</cite>.</div>' => '<div>Creado por <cite><a href="http://www.duckduckgo.com/?q=!+%1$s">%1$s</a> %2$s</cite>.</div>',
 'Classic Look' => 'Apariencia Clásica',
 'Clear Look' => 'Apariencia Clara',

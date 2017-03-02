@@ -20,6 +20,11 @@ div[role="article"] {
   overflow-x: hidden;
 }
 
+#eu_cookie_consent {
+  margin-top: 2em;
+  position: static !important;
+}
+
 #menu > li > ul > li:first-child h2 {
   margin-top: 0;
 }
