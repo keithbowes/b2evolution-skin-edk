@@ -66,6 +66,26 @@ else $author_class = ' class="user-comment"';
   echo $params['comment_start'];
 echo $params['comment_title_before'];
 
+global $after_user_text;
+$after_user_text = '';
+
+if (!function_exists('showCommentAuthor'))
+{
+	function showCommentAuthor($Comment, $params)
+	{
+		global $after_user_text;
+		$Comment->author2( array(
+				'before'       => ' ',
+				'after'        => $after_user_text,
+				'before_user'  => '',
+				'after_user'   => $after_user_text,
+				'format'       => 'htmlbody',
+				'link_to'	   => $params['link_to'],		// 'userpage' or 'userurl' or 'userurl>userpage' or 'userpage>userurl'
+				'link_text'    => 'preferredname',
+			));
+	}
+}
+
 		switch( $Comment->get( 'type' ) )
 		{
 			case 'comment': // Display a comment:
@@ -93,7 +113,7 @@ echo $params['comment_title_before'];
 							}
 						}
 						$after_user_text = sprintf($Skin->T_(' (in response to <a href="%s">%s</a>)'), htmlentities(get_full_url()) . '#c' . $refcomment, $refname);
-					} else $after_user_text = '';
+					}
 
 					// Normal comment
 					$Comment->permanent_link( array(
@@ -110,16 +130,8 @@ echo $params['comment_title_before'];
 					echo __('PREVIEW Comment from:').' ';
 				}
 
-				$Comment->author2( array(
-						'before'       => ' ',
-						'after'        => $after_user_text,
-						'before_user'  => '',
-						'after_user'   => $after_user_text,
-						'format'       => 'htmlbody',
-						'link_to'	   => $params['link_to'],		// 'userpage' or 'userurl' or 'userurl>userpage' or 'userpage>userurl'
-						'link_text'    => $params['author_link_text'],
-					) );
 
+				showCommentAuthor($Comment, $params);
 				if ( ! $Comment->get_author_User() )
 					$Comment->msgform_link( $Blog->get('msgformurl') );
 				break;
@@ -131,7 +143,7 @@ echo $params['comment_title_before'];
 						'text' 		=> __('Trackback'),
 						'nofollow'	=> true,
 					) );
-				$Comment->author( '', '#', '', '#', 'htmlbody', true );
+				showCommentAuthor($Comment, $params);
 				break;
 
 			case 'pingback': // Display a pingback:
@@ -142,7 +154,7 @@ echo $params['comment_title_before'];
 						'class'     => 'evo_comment_type',
 						'nofollow'	=> true,
 					) );
-				$Comment->author( '', '#', '', '#', 'htmlbody', true );
+				showCommentAuthor($Comment, $params);
 				break;
 		}
 
