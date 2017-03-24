@@ -317,104 +317,37 @@ table summary {
   padding: 0.1em 0.5em;
 }
 
-.bCalendarEmptyCell {
-  border-left-width: 0 !important;
-  border-right-width: 0 !important;
-  border-top-width: 0 !important;
-  cursor: default;
-}
-
-.bCalendarEmptyCell:hover {
-  background-color: transparent !important;
-}
-
-.bCalendarEmptyCell + td:not(.bCalendarEmptyCell)
-{
-  border-left-width: thin;
-  border-left-style: inset;
-}
-
-.bCalendarLinkPost a {
-  color: maroon !important;
-}
-
 .bCalendarTable {
-  background-color: #dc9;
-  border: thin solid #ddd;
-  margin: auto;
-  width: 100%;
-}
-
-.bCalendarTable a:hover {
-  background-color: #e0e6e0;
-  color: #333;
+  background-color: transparent;
+  border: none !important;
 }
 
 .bCalendarTable caption {
-  border: none !important;
-  margin: 0.2em 0 0.3em 0 !important;
+  font-weight: normal !important;
+  margin: 0 0 0 2ex !important;
+  text-align: left !important;
 }
 
-.bCalendarTable caption * {
-  background-color: transparent !important;
+.bCalendarTable tbody,
+.bCalendarTable thead,
+.bCalendarTable tfoot [class] {
+  display: none !important;
 }
 
-.bCalendarTable tbody td#bCalendarToday {
-  background-color: azure;
+.bCalendarTable tfoot td {
+  padding: 0 !important;
 }
 
-.bCalendarTable tbody td:not(#bCalendarToday):hover {
-  background-color: #eee;
-  color: #500;
+.bCalendarTable tfoot td a:after {
+  content: " " attr(title);
 }
 
-.bCalendarTable td {
-  border-color: olive;
-  border-style: outset;
-  border-width: thin;
-  color: #005;
+.bCalendarTable tfoot tr td,
+.bCalendarTable tfoot tr td a {
+  clear: left;
+  float: left;
   font-size: 1em;
-  font-weight: normal;
-  letter-spacing: normal;
-  text-align: center;
-}
-
-.bCalendarTable tfoot td {
-  padding: 0;
-}
-
-.bCalendarTable tfoot td a {
-  color: maroon !important;
-  padding: 0;
-}
-
-.bCalendarTable tfoot * {
-  font-size: 12pt;
-  font-weight: normal;
-  letter-spacing: normal;
-}
-
-.bCalendarTable tfoot td {
-  border: none;
-}
-
-.bCalendarTable th {
-  border-width: 0 0 thin 0;
-  color: black;
-  font-family: 'Comic Sans MS', TSCu_Comic, Geneva, sans-serif;
-  font-size: 0.8em;
-  font-weight: bold;
-  text-align: center;
-}
-
-.bCalendarTable th:hover {
-  background-color: #EE4;
-  color: #C40;
-  font-style: normal;
-}
-
-.bCalendarTable tr td:last-child {
-  border-right: none;
+  line-height: 0.5em;
 }
 
 .button {

@@ -191,8 +191,8 @@ input.search_field:hover {
   padding-left: 0.5em;
 }
 
-#menu ul li a {
-  color: silver;
+#menu ul li a:not(.button) {
+  color: silver !important;
 }
 
 #nav {
