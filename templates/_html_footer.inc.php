@@ -11,10 +11,9 @@
  * @package evoskins
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
-global $footer_elem;
-echo '<' . $footer_elem . ' role="contentinfo" id="credit">' . "\n";
+echo '<footer role="contentinfo" id="credit">' . "\n";
 	show_footer();
-echo '</' . $footer_elem . '>' . "\n";
+echo '</footer>' . "\n";
 ?>
 
 <!-- End of skin_wrapper -->

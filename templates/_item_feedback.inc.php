@@ -21,7 +21,6 @@
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
 
 // Default params:
-global $footer_elem;
 $params = array_merge( array(
 		'Item'                  => NULL,
 		'disp_comments'         => true,
@@ -51,8 +50,8 @@ $params = array_merge( array(
 		'comment_rating_after'  => '</div>',
 		'comment_text_before'   => '<div class="evo_comment_text">',
 		'comment_text_after'    => '</div>',
-		'comment_info_before'   => '<' . $footer_elem . ' role="contentinfo" class="evo_comment_footer clear text-muted">',
-		'comment_info_after'    => '</' . $footer_elem . '></div>',
+		'comment_info_before'   => '<footer role="contentinfo" class="evo_comment_footer clear text-muted">',
+		'comment_info_after'    => '</footer></div>',
 		'preview_start'         => '<div role="article" class="evo_comment evo_comment__preview panel panel-warning" id="comment_preview">',
 		'preview_end'           => '</div>',
 		'comment_error_start'   => '<div role="article" class="evo_comment evo_comment__error panel panel-default" id="comment_error">',

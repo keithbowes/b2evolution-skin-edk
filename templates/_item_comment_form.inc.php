@@ -137,10 +137,6 @@ if( $params['disp_comment_form'] && $Item->can_comment( NULL, NULL, '#', $params
 				$comment_author_email = isset($_COOKIE[$cookie_email]) ? trim($_COOKIE[$cookie_email]) : '';
 				$comment_author_url = isset($_COOKIE[$cookie_url]) ? trim($_COOKIE[$cookie_url]) : '';
 			}
-			if( empty($comment_author_url) )
-			{	// Even if we have a blank cookie, let's reset this to remind the bozos what it's for
-				$comment_author_url = prefers_xhtml() ? 'http://' : '';
-			}
 
 			$comment_content =  $params['default_text'];
 		}
@@ -179,7 +175,6 @@ if( $params['disp_comment_form'] && $Item->can_comment( NULL, NULL, '#', $params
 
 /*
 	echo '<script type="text/javascript">
-/* <![CDATA[ *
 function validateCommentForm(form)
 {
 	if( form.'.$dummy_fields['content'].'.value.replace(/^\s+|\s+$/g,"").length == 0 )
@@ -188,7 +183,6 @@ function validateCommentForm(form)
 		return false;
 	}
 }
-/* ]]> *
 </script>';*/
 
 echo '<div id="form_p' . $Item->ID . '">';

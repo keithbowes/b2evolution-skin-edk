@@ -55,7 +55,7 @@ class edk_Skin extends Skin
 	 */
 	function get_api_version()
 	{
-		return prefers_xhtml() ? 5 : 6;
+		return 6;
 	}
 
 

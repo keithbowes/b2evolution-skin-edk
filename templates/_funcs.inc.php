@@ -253,51 +253,6 @@ function get_tinyurl()
 		return '';
 }
 
-function init_content_type()
-{
-	global $content_type, $prefers_xhtml, $use_strict;
-
-	if (!isset($content_type))
-	{
-		/* Make sure user agents with inaccurate Accept headers get the right represention.
-		 * The element values are whether XHTML is truly supported. */
-		$ua_overrides = array(
-			'Dillo' => FALSE,
-			'Validator.nu' => FALSE,
-			'Validator' => TRUE,
-		);
-
-		foreach ($ua_overrides as $ua => $support)
-		{
-			if (strpos($_SERVER['HTTP_USER_AGENT'], $ua) !== FALSE)
-			{
-				$r = $support;
-				break;
-			}
-		}
-
-		if (!isset($r))
-		{
-			/* If not overriden, let the HTTP headers decide */
-			$types = parse_accept();
-			if (!empty($types['application/xhtml+xml']))
-			{
-				if (!empty($types['text/html']))
-					$r = $types['application/xhtml+xml'] > $types['text/html'];
-				else
-					$r = $types['application/xhtml+xml'] > 0;
-			}
-			else
-				$r = FALSE;
-		}
-
-		$content_type = $r ? 'application/xhtml+xml' : 'text/html';
-	}
-
-	$prefers_xhtml = 'text/html' != $content_type;
-	$use_strict = $prefers_xhtml;
-}
-
 function is_text_browser()
 {
 	return preg_match('/^L_?y_?n_?x|[Ll]inks/', $_SERVER['HTTP_USER_AGENT']);
@@ -306,52 +261,6 @@ function is_text_browser()
 function is_valid_query($result)
 {
 	return ($result !== FALSE && is_array($result) && count($result) > 0);
-}
-
-function links_to_xhtml2($str)
-{
-	if (!prefers_xhtml())
-		return $str;
-	else
-	{
-		$str = preg_replace('/\s+lang=/', ' xml:lang=', $str);
-		$str = preg_replace('/(<a\s+[^>]+\s*)type=/', '$1hreftype=', $str);
-		return $str;
-	}
-}
-
-function parse_accept()
-{
-	$ret = array();
-	$acc = @$_SERVER['HTTP_ACCEPT'];
-	$arr = explode(',', $acc);
-	for ($i = 0; $i < count($arr); $i++)
-	{
-		$ar2 = explode(';q=', $arr[$i]);
-		$type = trim($ar2[0]);
-
-		if ($type == 'text/*' && empty($ret['text/html']))
-			$type = 'text/html';
-		elseif ($type == 'application/*' && empty($ret['application/xhtml+xml']))
-			$type = 'application/xhtml+xml';
-		elseif ($type == '*/*' || $type == '*')
-		{
-			if (!empty($ret['text/html']) && empty($ret['application/xhtml+xml']))
-				$type = 'application/xhtml+xml';
-			elseif (empty($ret['text/html']))
-				$type = 'text/html';
-			else
-				continue;
-		}
-
-		@$qual = $ar2[1];
-		if (empty($qual))
-			$qual = 1;
-
-		$ret[$type] = $qual;
-	}
-
-	return $ret;
 }
 
 /* Show the footer */
@@ -378,12 +287,6 @@ function supports_link_toolbar()
 	$ret = $ret || is_text_browser(); // Text browsers
 	$ret = $ret || preg_match('/UdiWWW|i?C[Aa][Bb]|Emacs_W3/', $ua); // Ancient browsers
 	return $ret;
-}
-
-function prefers_xhtml()
-{
-	global $prefers_xhtml;
-	return $prefers_xhtml;
 }
 
 global $baseurl, $collection_path;

@@ -142,7 +142,7 @@ elseif( $action == "reg_validation" )
 	$Form->begin_form( 'evo_comment' );
 
 	echo '<p>'.sprintf( __( 'An email has just been sent to %s . Please check your email and click on the validation link you will find in that email.' ), '<b>'.$email.'</b>' ).'</p>';
-	echo '<p>'.sprintf( __( 'If you have not received the email in the next few minutes, please check your spam folder. The email was sent from %s and has the title «%s».' ), $notify_from,
+	echo '<p>'.sprintf( __( 'If you have not received the email in the next few minutes, please check your spam folder. The email was sent from %s and has the title &laquo;laquo;laquo;%s&raquo;raquo;raquo;.' ), $notify_from,
 					'<b>'.sprintf( __('Validate your email address for "%s"'), $login ).'</b>' ).'</p>';
 	echo '<p>'.__( 'If you still can\'t find the email or if you would like to try with a different email address,' ).' '.
 					'<a href="'.$Blog->gen_baseurl().'">'.__( 'click here to try again' ).'.</a></p>';

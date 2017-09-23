@@ -16,7 +16,6 @@
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
 
 // Default params:
-global $footer_elem;
 $params = array_merge( array(
 		'comment_template'        => 'templates/_item_comment.inc.php',	// The template used for displaying individual comments (including preview)
 		'author_link_text'        => 'auto', // avatar_name | avatar_login | only_avatar | name | login | nickname | firstname | lastname | fullname | preferredname
@@ -36,8 +35,8 @@ $params = array_merge( array(
 		'comment_rating_after'    => '</div>',
 		'comment_text_before'     => '<div class="evo_comment_text">',
 		'comment_text_after'      => '</div>',
-		'comment_info_before'     => '<' . $footer_elem . ' role="contentinfo" class="evo_comment_info clear text-muted">',
-		'comment_info_after'      => '</' . $footer_elem . '></div>',
+		'comment_info_before'     => '<footer role="contentinfo" class="evo_comment_info clear text-muted">',
+		'comment_info_after'      => '</footer></div>',
 		'comment_image_size'      => 'fit-1280x720',
 		'comment_image_class'     => 'img-responsive',
 	), $params );

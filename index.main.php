@@ -2,10 +2,6 @@
 
 skin_init( $disp );
 
-/* Concession for pre-6.0 versions of b2evolution */
-if (!($Skin instanceof edk_Skin))
-	skin_include('templates/_funcs.inc.php');
-
 /*
  * Use the value of diaspora-pod if a pod was manually entered.
  * Otherwise use the value of diaspora-pod-select.
@@ -21,7 +17,6 @@ if ($diaspora_pod)
 }
 
 skin_include( 'templates/_html_header.inc.php' );
-$footer_elem = prefers_xhtml() ? 'div' : 'footer';
 
 display_if_empty();
 while( $Item = & mainlist_get_item() ):
@@ -29,16 +24,16 @@ while( $Item = & mainlist_get_item() ):
 $_item_title = ($disp == 'single') ? $Item->title : '';
 $_item_url = get_tinyurl();
 ?>
-	<div role="article" id="<?php $Item->anchor_id(); ?>" <?php printf('%s="%s"', prefers_xhtml() ? 'xml:lang' : 'lang', locale_lang(FALSE)); ?>>
+	<div role="article" id="<?php $Item->anchor_id(); ?>" <?php printf('lang="%s"', locale_lang(FALSE)); ?>>
 <?php
 	$Item->locale_temp_switch();
-	printf('<h2 class="storytitle"><a rel="%4$s" href="%1$s"  title="%3$s">%2$s</a></h2>', $Item->get_single_url(), $Item->title, __('Permanent link to full entry'), prefers_xhtml() ? 'permalink' : 'bookmark');
+	printf('<h2 class="storytitle"><a rel="%4$s" href="%1$s"  title="%3$s">%2$s</a></h2>', $Item->get_single_url(), $Item->title, __('Permanent link to full entry'), 'bookmark');
 ?>
 	<div class="meta"><?php get_meta($Item); ?></div>
 
 <?php
 global $first_item, $last_item, $next_item, $prev_item;
-if ((!prefers_xhtml() && !supports_link_toolbar()) && 'single' == $disp &&
+if (!supports_link_toolbar() && 'single' == $disp &&
 	(NULL !== $first_item || NULL !== $last_item || NULL !== $next_item || NULL !== $prev_item))
 {
 ?>
@@ -48,7 +43,7 @@ if ((!prefers_xhtml() && !supports_link_toolbar()) && 'single' == $disp &&
 		{
 ?>
 		<div id="firstitem">
-			<a <?php if (prefers_xhtml()) echo 'rel="first" '; ?>href="<?php echo get_full_url($first_item['post_urltitle']) ?>">↓ <?php echo htmlspecialchars($first_item['post_title']) ?></a>
+			<a href="<?php echo get_full_url($first_item['post_urltitle']) ?>">↓ <?php echo htmlspecialchars($first_item['post_title']) ?></a>
 		</div>
 <?php
 		}
@@ -56,7 +51,7 @@ if ((!prefers_xhtml() && !supports_link_toolbar()) && 'single' == $disp &&
 		{
 ?>
 		<div id="lastitem">
-			<a <?php if (prefers_xhtml()) echo 'rel="last" '; ?>href="<?php echo get_full_url($last_item['post_urltitle']) ?>"><?php echo htmlspecialchars($last_item['post_title']) ?> ↑</a>
+			<a href="<?php echo get_full_url($last_item['post_urltitle']) ?>"><?php echo htmlspecialchars($last_item['post_title']) ?> ↑</a>
 		</div>
 <?php
 		}
@@ -136,8 +131,8 @@ if ($MainList)
 		' WHERE cat_blog_ID=' . $Blog->ID . ')', ARRAY_A, 0);
 
 	$MainList->page_links(array(
-			'block_start' => "\n" . '<!-- begin footer -->' . "\n" . '<' . $footer_elem . ' id="page-links"' . (prefers_xhtml() ? ' role="navigation"' : '') . '>',
-			'block_end' => '</' . $footer_elem . '>' . "\n" . '<!-- end footer -->' . "\n",
+			'block_start' => "\n" . '<!-- begin footer -->' . "\n" . '<footer id="page-links">',
+			'block_end' => '</footer>' . "\n" . '<!-- end footer -->' . "\n",
 			'prev_text' => '<span class="sago">←</span>',
 			'next_text' => '<span class="sago">→</span>',
 			'list_span' => ceil($row['COUNT(*)'] / $Blog->get_setting('posts_per_page')),
