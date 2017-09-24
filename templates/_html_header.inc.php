@@ -144,8 +144,6 @@ function get_other_blogs()
 global $edk_base, $skin;
 $edk_base = $Blog->get_local_skins_url('basic').$skin.'/';
 
-skin_content_header($content_type);
-
 edk_css_include();
 $dtd = '<!DOCTYPE html>';
 $htmlelem = '<html lang="' . locale_lang(FALSE) . '">';

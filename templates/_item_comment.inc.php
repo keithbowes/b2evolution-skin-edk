@@ -31,7 +31,7 @@ $params = array_merge( array(
 		'comment_rating_after'  => '</div>',
 		'comment_text_before'   => '<div class="evo_comment_text">',
 		'comment_text_after'    => '</div>',
-		'comment_info_before'   => '<footer role="contentinfo" class="evo_comment_footer clear text-muted">',
+		'comment_info_before'   => '<footer class="evo_comment_footer clear text-muted">',
 		'comment_info_after'    => '</footer></div>',
 		'link_to'               => 'userurl>userpage', // 'userpage' or 'userurl' or 'userurl>userpage' or 'userpage>userurl'
 		'author_link_text'      => 'preferredname', // avatar_name | avatar_login | only_avatar | name | login | nickname | firstname | lastname | fullname | preferredname

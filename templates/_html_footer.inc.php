@@ -11,7 +11,7 @@
  * @package evoskins
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
-echo '<footer role="contentinfo" id="credit">' . "\n";
+echo '<footer id="credit">' . "\n";
 	show_footer();
 echo '</footer>' . "\n";
 ?>

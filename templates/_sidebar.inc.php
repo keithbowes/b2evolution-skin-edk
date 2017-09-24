@@ -243,7 +243,7 @@ for ($i = 0; $i < count($pods); $i++)
 </datalist>
 
 <label>
-<input type="text" name="diaspora-pod" value="" list="pods-list" role="combobox" aria-expanded="true" aria-autocomplete="both" aria-owns="pods-list" aria-activedescendant="selected-option" />
+<input type="text" name="diaspora-pod" value="" list="pods-list" aria-expanded="true" aria-autocomplete="both" aria-owns="pods-list" aria-activedescendant="selected-option" />
 <br />
 
 </label>

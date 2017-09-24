@@ -50,7 +50,7 @@ $params = array_merge( array(
 		'comment_rating_after'  => '</div>',
 		'comment_text_before'   => '<div class="evo_comment_text">',
 		'comment_text_after'    => '</div>',
-		'comment_info_before'   => '<footer role="contentinfo" class="evo_comment_footer clear text-muted">',
+		'comment_info_before'   => '<footer class="evo_comment_footer clear text-muted">',
 		'comment_info_after'    => '</footer></div>',
 		'preview_start'         => '<div role="article" class="evo_comment evo_comment__preview panel panel-warning" id="comment_preview">',
 		'preview_end'           => '</div>',

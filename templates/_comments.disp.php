@@ -35,7 +35,7 @@ $params = array_merge( array(
 		'comment_rating_after'    => '</div>',
 		'comment_text_before'     => '<div class="evo_comment_text">',
 		'comment_text_after'      => '</div>',
-		'comment_info_before'     => '<footer role="contentinfo" class="evo_comment_info clear text-muted">',
+		'comment_info_before'     => '<footer class="evo_comment_info clear text-muted">',
 		'comment_info_after'      => '</footer></div>',
 		'comment_image_size'      => 'fit-1280x720',
 		'comment_image_class'     => 'img-responsive',
