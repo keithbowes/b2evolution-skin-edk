@@ -119,18 +119,12 @@ if (class_exists('DOMDocument'))
 		/* Supress warnings, so that users won't be alerted about errors in the HTML input */
 		if (@$dom->loadHTML($file_contents))
 		{
-			$rows = $dom->getElementById('myTable')->getElementsByTagName('tbody')->item(0)->getElementsByTagName('tr');
+			$rows = $dom->getElementsByTagName('tbody')->item(0)->getElementsByTagName('tr');
 
-			$pi = 0;
 			for ($i = 0; $i < $rows->length; $i++)
 			{
-				$cpod = $rows->item($i)->getElementsbyTagName('td')->item(0)->getElementsByTagName('a')->item(0)->getAttribute('href');
-				if (preg_match(',^.*(https://.+)$,', $cpod, $matches))
-				{
-					$pods[$pi] = $matches[1];
-					@fwrite($fh, $pods[$pi] . "\n");
-					$pi++;
-				}
+				$pods[$i] = $rows->item($i)->getElementsByTagName('td')->item(0)->getElementsByTagName('a')->item(0)->nodeValue;
+				@fwrite($fh, $pods[$i] . "\n");
 			}
 		}
 
@@ -138,8 +132,8 @@ if (class_exists('DOMDocument'))
 	}
 }
 
-$ger_pods = array('https://despora.de', 'https://wk3.org', 'https://socializer.cc', 'https://sysad.org', 'https://iliketoast.net');
-$std_pods = array('https://joindiaspora.com', 'https://pod.geraspora.de', 'https://diasp.de', 'https://diasp.eu', 'https://diasporabrazil.org', 'https://podricing.org', 'https://diasp.org', 'https://diaspora-fr.org', 'https://poddery.com', 'https://nerdpol.ch');
+$ger_pods = array('despora.de', 'wk3.org', 'socializer.cc', 'sysad.org', 'iliketoast.net');
+$std_pods = array('joindiaspora.com', 'pod.geraspora.de', 'diasp.de', 'diasp.eu', 'diasporabrazil.org', 'podricing.org', 'diasp.org', 'diaspora-fr.org', 'poddery.com', 'nerdpol.ch');
 $pods = array_merge($std_pods, $ger_pods, $pods);
 
 global $pod;

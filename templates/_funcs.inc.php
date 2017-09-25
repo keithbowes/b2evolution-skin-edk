@@ -45,7 +45,7 @@ function diaspora_share()
 	{
 		$nine_weeks = time() + 9 * 7 * 24 * 60 * 60;
 		setcookie('Diaspora-Pod', $diaspora_pod,  $nine_weeks, $cookie_path);
-		header('Location: ' . $diaspora_pod . '/bookmarklet?url=' . param('diaspora-url') . '&title=' . param('diaspora-title'));
+		header('Location: https://' . $diaspora_pod . '/bookmarklet?url=' . param('diaspora-url') . '&title=' . param('diaspora-title'));
 		die();
 	}
 }
