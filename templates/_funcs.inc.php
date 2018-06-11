@@ -15,39 +15,14 @@ function _t($str)
 	return NT_($str);
 }
 
-global $diaspora_api;
-function diaspora_init()
-{
-	global $diaspora_api, $diaspora_pod, $plugins_path;
-	$diaspora_api_file = $plugins_path . '/diaspora_plugin/class-api.php';
-	if (file_exists($diaspora_api_file))
-	{
-		require_once($diaspora_api_file);
-		$diaspora_api = new WP2D_API($diaspora_pod);
-	}
-}
-
 function diaspora_share()
 {
-	global $cookie_path, $diaspora_api, $diaspora_pod;
+	global $cookie_path, $diaspora_pod;
 
-	if (param('pod-username'))
-	{
-		$diaspora_api->login(param('diaspora-username'), param('diaspora-password'));
-		$diaspora_api->post(param('diaspora-title') . ' - ' . param('diaspora-url'), param('diaspora-aspect'));
-
-		global $Session;
-		$Session->set('diaspora-aspect', param('diaspora-aspect'));
-		$Session->set('diaspora-password', param('diaspora-password'));
-		$Session->set('diaspora-username', param('diaspora-username'));
-	}
-	else
-	{
-		$nine_weeks = time() + 9 * 7 * 24 * 60 * 60;
-		setcookie('Diaspora-Pod', $diaspora_pod,  $nine_weeks, $cookie_path);
-		header('Location: https://' . $diaspora_pod . '/bookmarklet?url=' . param('diaspora-url') . '&title=' . param('diaspora-title'));
-		die();
-	}
+	$nine_weeks = time() + 9 * 7 * 24 * 60 * 60;
+	setcookie('Diaspora-Pod', $diaspora_pod,  $nine_weeks, $cookie_path);
+	header('Location: ' . $diaspora_pod . '/bookmarklet?url=' . param('diaspora-url') . '&title=' . param('diaspora-title'));
+	die();
 }
 
 function get_copyright($params = array())
@@ -174,7 +149,7 @@ function get_post_urltitle($dir = '', $row = 0)
 {
 	global $Blog, $DB, $Item;
 
-	$blogid = is_object($Item) ? $Item->blog_ID : is_object($Blog) ? $Blog->ID : -1;
+	$blogid = is_object($Item) ? $Item->get_blog_ID() : is_object($Blog) ? $Blog->ID : -1;
 	$blogslug = is_object($Item) ? $Item->urltitle : '';
 	$categorytablename = is_object($Item) && is_object($Item->main_Chapter) ? $Item->main_Chapter->dbtablename : 'T_categories';
 	$itemtablename = is_object($Item) && isset($Item->dbtablename) ? $Item->dbtablename : 'T_items__item';
@@ -253,11 +228,6 @@ function get_tinyurl()
 		return '';
 }
 
-function is_text_browser()
-{
-	return preg_match('/^L_?y_?n_?x|[Ll]inks/', $_SERVER['HTTP_USER_AGENT']);
-}
-
 function is_valid_query($result)
 {
 	return ($result !== FALSE && is_array($result) && count($result) > 0);
@@ -276,17 +246,6 @@ function show_footer()
 
 	printf($Skin->T_('<div>Powered by <cite><a href="http://www.duckduckgo.com/?q=!+%1$s">%1$s</a> %2$s</cite>.</div>'), $app_name, $app_version);
 	printf('<div id="copyright">%s</div>', get_copyright(array('display' => FALSE)));
-}
-
-function supports_link_toolbar()
-{
-	$ua = $_SERVER['HTTP_USER_AGENT'];
-	/* Note: Opera > 12.x is based on WebKit and doesn't have a link toolbar,
-	 * but its user-agent is OPR instead of Opera, so we're OK. */
-	$ret = preg_match('/Iceape|Opera|SeaMonkey/', $ua); // Graphical browsers
-	$ret = $ret || is_text_browser(); // Text browsers
-	$ret = $ret || preg_match('/UdiWWW|i?C[Aa][Bb]|Emacs_W3/', $ua); // Ancient browsers
-	return $ret;
 }
 
 global $baseurl, $collection_path;

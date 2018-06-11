@@ -2,15 +2,7 @@
 
 skin_init( $disp );
 
-/*
- * Use the value of diaspora-pod if a pod was manually entered.
- * Otherwise use the value of diaspora-pod-select.
- */
-if (!($diaspora_pod = param('diaspora-pod')))
-	$diaspora_pod = param('diaspora-pod-select');
-
-diaspora_init();
-if ($diaspora_pod)
+if ($diaspora_pod = param('diaspora-pod'))
 {
 	global $diaspora_pod;
 	diaspora_share();
@@ -23,22 +15,13 @@ while( $Item = & mainlist_get_item() ):
 
 $_item_title = ($disp == 'single') ? $Item->title : '';
 $_item_url = get_tinyurl();
-?>
-	<div role="article" id="<?php $Item->anchor_id(); ?>" <?php printf('lang="%s"', locale_lang(FALSE)); ?>>
-<?php
-	$Item->locale_temp_switch();
-	printf('<h2 class="storytitle"><a rel="%4$s" href="%1$s"  title="%3$s">%2$s</a></h2>', $Item->get_single_url(), $Item->title, __('Permanent link to full entry'), 'bookmark');
-?>
-	<div class="meta"><?php get_meta($Item); ?></div>
 
-<?php
-global $first_item, $last_item, $next_item, $prev_item;
-if (!supports_link_toolbar() && 'single' == $disp &&
-	(NULL !== $first_item || NULL !== $last_item || NULL !== $next_item || NULL !== $prev_item))
+if ('single' == $disp)
 {
 ?>
 <div id="prevnext">
 <?php
+		global $first_item, $last_item, $next_item, $prev_item;
 		if (NULL !== $first_item)
 		{
 ?>
@@ -77,6 +60,13 @@ if (!supports_link_toolbar() && 'single' == $disp &&
 <?php
 }
 ?>
+	<div role="article" id="<?php $Item->anchor_id(); ?>" <?php printf('lang="%s"', locale_lang(FALSE)); ?>>
+<?php
+	$Item->locale_temp_switch();
+	printf('<h2 class="storytitle"><a rel="%4$s" href="%1$s"  title="%3$s">%2$s</a></h2>', $Item->get_single_url(), $Item->title, __('Permanent link to full entry'), 'bookmark');
+?>
+	<div class="meta"><?php get_meta($Item); ?></div>
+
 
 <div class="storycontent">
 		<?php skin_include('templates/_item_content.inc.php'); ?>

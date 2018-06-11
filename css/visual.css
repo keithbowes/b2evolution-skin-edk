@@ -83,11 +83,6 @@ h3 + p a {
   margin: 0.5em 0.1em !important;
 }
 
-input[list] {
-  -moz-appearance: menulist;
-  -webkit-appearance: menulist;
-}
-
 input[type="file"],
 .form-control:not(.search_field),
 .info {

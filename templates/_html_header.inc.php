@@ -27,15 +27,15 @@ function edk_css_include()
 			'file' => $edk_base . 'css/classic.css',
 			'title' => $Skin->T_('Classic Look'),
 		),
-		'html5' => array(
+		'clear' => array(
 			'file' => $edk_base . 'css/clear.css',
 			'title' => $Skin->T_('Clear Look'),
 		),
-		'mobile' => array(
+		'one' => array(
 			'file' => $edk_base . 'css/one.css',
 			'title' => $Skin->T_('One-column Look'),
 		),
-		'xhtml' => array(
+		'transitional' => array(
 			'file' => $edk_base . 'css/transitional.css',
 			'title' => $Skin->T_('Transitional Look'),
 		),
@@ -78,8 +78,9 @@ function edk_css_include()
 	{
 		global $Session;
 		if (!$Session->is_desktop_session())
-			$default_style = $alternate_styles['mobile']['file'];
-			$default_style = $alternate_styles['html5']['file'];
+			$default_style = $alternate_styles['one']['file'];
+		else
+			$default_style = $alternate_styles['clear']['file'];
 	}
 
 	/* Get the default style sheet array from the file name */
@@ -175,10 +176,8 @@ $params = array_merge( array(
 		add_headline(sprintf('<link rel="shortlink" href="%s" title="%s" />%s', get_tinyurl(), $Skin->T_('Shortened Permalink'),  "\n"));
 	}
 
-	if (supports_link_toolbar())
-	{
-		add_headline(sprintf('<link rel="bookmark" href="%s#content" title="%s" />', $canonical_url, $Skin->T_('Main Content')));
-		add_headline(sprintf('<link rel="bookmark" href="%s#menu" title="%s" />', $canonical_url, $Skin->T_('Menu')));
+	add_headline(sprintf('<link rel="bookmark" href="%s#content" title="%s" />', $canonical_url, $Skin->T_('Main Content')));
+	add_headline(sprintf('<link rel="bookmark" href="%s#menu" title="%s" />', $canonical_url, $Skin->T_('Menu')));
 
 if ('single' == $disp)
 		{
@@ -212,7 +211,7 @@ if (NULL !== $prev_item)
 if (NULL !== $next_item)
 {
   add_headline(sprintf('<link rel="next" href="%s" title="%s →" />', $next_item->get_permanent_url(), htmlspecialchars($next_item->title)));
-}}
+}
 if ($Blog->get_setting('feed_content') != 'none')
 {
 	if (file_exists("$skins_path/_esf"))

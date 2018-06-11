@@ -7,7 +7,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 
 $trans['de_DE'] = array(
 '__meta__' => array('format_version'=>1, 'charset'=>'utf-8'),
-'' => "Project-Id-Version: b 2e\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2017-03-01 21:37-0500\nPO-Revision-Date: 2017-03-01 21:37-0500\nLast-Translator: Keith <keith@localhost>\nLanguage-Team: German\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n",
+'' => "Project-Id-Version: b 2e\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2018-06-11 13:27-0400\nPO-Revision-Date: 2018-06-11 13:26-0400\nLast-Translator: Keith <keith@localhost>\nLanguage-Team: German\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n",
 '403 Forbidden' => '403 Verboten',
 '<p><a href="%s">%s</a> cannot resolve the requested URL.</p>' => '<p><a href="%s">%s</a> kann nicht die angeforderter URL auflösen.</p>',
 '404 Not Found' => '404 Nicht Gefunden',
@@ -38,11 +38,10 @@ $trans['de_DE'] = array(
 '<a href="http://en.wikipedia.org/wiki/BBCode">BBCode</a> is enabled.' => '<a href="http://de.wikipedia.org/wiki/BBCode">BBCode</a> ist aktiviert.',
 '%s <span class="button-sf">Feed</span>' => '%s<span class="button-sf">-Feed</span>',
 '%s Feed' => '%s-Feed',
-'Valid XHTML' => 'Gültige XHTML',
 'Share on Facebook' => 'Teilen auf Facebook',
 'Share on Google+' => 'Teilen auf Google+',
 'Share on Twitter' => 'Teilen auf Twitter',
-'Select a pod to use above or enter one below.' => 'Wählen einen Pod, um zu verwenden, oder eingeben einen Pod in den Textfeld.',
+'Pod URL: ' => 'POD-URL: ',
 'Diaspora* user name' => 'Diaspora*-Benutzername',
 'Diaspora* password' => 'Diaspora*-Passwort',
 'Diaspora* aspects' => 'Diaspora*-Aspekte',

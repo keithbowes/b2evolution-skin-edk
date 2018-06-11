@@ -64,90 +64,6 @@ if ($Blog->get_setting('feed_content') != 'none')
 <li>
 
 <!-- Diaspora section -->
-<?php
-$pods = array();
-if (class_exists('DOMDocument'))
-{
-	$locfile = 'pods.txt';
-	$remfile = 'http://podupti.me/';
-	$file = $locfile;
-	if (file_exists($file))
-	{
-		$lm = filemtime($file);
-
-		/* Monthly updates should suffice */
-		$is_stale = is_file($file) && strftime('%m', $lm) != strftime('%m', time());
-		if ($is_stale)
-		{
-			$file = $remfile;
-		}
-	}
-	else
-	{
-		$file = $remfile;
-		$is_stale = TRUE;
-	}
-
-	if (!$is_stale)
-	{
-		$fh = fopen($locfile, 'r');
-		$i = 0;
-		while (!feof($fh))
-		{
-			$pods[$i] = rtrim(fgets($fh));
-			$i++;
-		}
-		fclose($fh);
-	}
-	else
-	{
-		$fh = fopen($locfile, 'w');
-		$dom = new DOMDocument();
-
-		if (ini_get('allow_url_fopen'))
-			$file_contents = file_get_contents($file);
-		elseif (extension_loaded('curl'))
-		{
-			$curl = curl_init($file);	
-			curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-			$file_contents = curl_exec($curl);
-			curl_close($curl);
-		}
-		else
-			$file_contents = '';
-
-		/* Supress warnings, so that users won't be alerted about errors in the HTML input */
-		if (@$dom->loadHTML($file_contents))
-		{
-			$rows = $dom->getElementsByTagName('tbody')->item(0)->getElementsByTagName('tr');
-
-			for ($i = 0; $i < $rows->length; $i++)
-			{
-				$pods[$i] = $rows->item($i)->getElementsByTagName('td')->item(0)->getElementsByTagName('a')->item(0)->nodeValue;
-				@fwrite($fh, $pods[$i] . "\n");
-			}
-		}
-
-		@fclose($fh);
-	}
-}
-
-$ger_pods = array('despora.de', 'wk3.org', 'socializer.cc', 'sysad.org', 'iliketoast.net');
-$std_pods = array('joindiaspora.com', 'pod.geraspora.de', 'diasp.de', 'diasp.eu', 'diasporabrazil.org', 'podricing.org', 'diasp.org', 'diaspora-fr.org', 'poddery.com', 'nerdpol.ch');
-$pods = array_merge($std_pods, $ger_pods, $pods);
-
-global $pod;
-if (array_key_exists('Diaspora-Pod', $_COOKIE))
-	$pod = $_COOKIE['Diaspora-Pod'];
-else
-	$pod = $pods[0];
-
-/* For some reason, array_unique() must be called before sort()
- * in order to keep one of the duplicate elements */
-$pods = array_unique($pods);
-sort($pods);
-?>
-
 <script type="text/javascript">
 var dia_text, mod_dia_text;
 
@@ -216,59 +132,11 @@ $diaform->hidden('redir', 'no');
 ?>
 <div>
 
-<datalist id="pods-list">
-<select name="diaspora-pod-select">
-<?php
-for ($i = 0; $i < count($pods); $i++)
-{
-	if (!empty($pods[$i]))
-	{
-		// I couldn't find a method to make options, so I'm just doing it manually
-		$attrs = ($pods[$i] != $pod) ? '' : ' selected="selected" id="selected-option"';
-		echo '<option value="' . $pods[$i] . '"' . $attrs . '>' . $pods[$i] . '</option>' . "\n";
-	}
-}
-?>
-</select>
-
-<br />
-<span class="help-inline">(<?php echo $Skin->T_('Select a pod to use above or enter one below.'); ?>)</span>
-<br />
-</datalist>
-
 <label>
-<input type="text" name="diaspora-pod" value="" list="pods-list" aria-expanded="true" aria-autocomplete="both" aria-owns="pods-list" aria-activedescendant="selected-option" />
+<?php echo $Skin->T_('Pod URL: ') ?> <input type="text" name="diaspora-pod" value="https://" />
 <br />
 
 </label>
-<noscript>
-<?php
-global $Session;
-global $diaspora_api;
-if (isset($diaspora_api))
-{
-	$diaform->input_field(array(
-		'name' => 'diaspora-username',
-		'value' => $Session->get('diaspora-username'),
-		'label' => $Skin->T_('Diaspora* user name'),
-	));
-
-	$diaform->input_field(array(
-		'type' => 'password',
-		'name' => 'diaspora-password',
-		'value' => $Session->get('diaspora-password'),
-		'label' => $Skin->T_('Diaspora* password'),
-	));
-
-	$diaform->input_field(array(
-		'name' => 'diaspora-aspect',
-		'value' => $Session->get('diaspora-aspect', 'public'),
-		'label' => $Skin->T_('Diaspora* aspects'),
-	));
-}
-
-?>
-</noscript>
 
 </div>
 <?php

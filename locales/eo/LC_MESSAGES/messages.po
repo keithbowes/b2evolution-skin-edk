@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: b 2e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-01 21:37-0500\n"
-"PO-Revision-Date: 2017-03-01 21:36-0500\n"
+"POT-Creation-Date: 2018-06-11 13:27-0400\n"
+"PO-Revision-Date: 2018-06-11 13:26-0400\n"
 "Last-Translator: Keith Bowes <keith@localhost>\n"
 "Language-Team: Esperanto\n"
 "Language: eo \n"
@@ -63,7 +63,7 @@ msgstr "Afiŝita en "
 msgid " by <a href=\"%s\">%s</a> on %s at %s %s %s"
 msgstr " de <a href=\"%s\">%s</a> je %s je %s %s %s"
 
-#: templates/_funcs.inc.php:368
+#: templates/_funcs.inc.php:272
 #, php-format
 msgid "<div>Powered by <cite><a href=\"http://www.duckduckgo.com/?q=!+%1$s\">%1$s</a> %2$s</cite>.</div>"
 msgstr "<div>Kreita pere de <cite><a href=\"http://www.duckduckgo.com/?q=!+%1$s\">%1$s</a> %2$s</cite>.</div>"
@@ -84,101 +84,97 @@ msgstr "Unukolumna aspekto"
 msgid "Transitional Look"
 msgstr "Intertempa aspekto"
 
-#: templates/_html_header.inc.php:216
+#: templates/_html_header.inc.php:155
 msgid "Please leave this for stats"
 msgstr "Bonvolu restigi tion pro statistikaĵoj"
 
-#: templates/_html_header.inc.php:231
+#: templates/_html_header.inc.php:169
 msgid "GNU General Public License Version 3"
 msgstr "Eldono 3 de la Ĝenerala Publika Permesilo de GNU"
 
-#: templates/_html_header.inc.php:231
+#: templates/_html_header.inc.php:169
 msgid "https://www.gnu.org/licenses/lgpl-3.0.en.html"
 msgstr "/eo/programado/gpl3.html"
 
-#: templates/_html_header.inc.php:237
+#: templates/_html_header.inc.php:175
 msgid "Canonical Permalink"
 msgstr "Kanona daŭrligilo"
 
-#: templates/_html_header.inc.php:238
+#: templates/_html_header.inc.php:176
 msgid "Shortened Permalink"
 msgstr "Mallongigita daŭrligilo"
 
-#: templates/_html_header.inc.php:243
+#: templates/_html_header.inc.php:179
 msgid "Main Content"
 msgstr "Ĉefa enhavo"
 
-#: templates/_html_header.inc.php:244
+#: templates/_html_header.inc.php:180
 msgid "Menu"
 msgstr "Menuo"
 
-#: templates/_item_comment.inc.php:95
+#: templates/_item_comment.inc.php:114
 #, php-format
 msgid " (in response to <a href=\"%s\">%s</a>)"
 msgstr " (responde al <a href=\"%s\">%s</a>)"
 
-#: templates/_item_comment.inc.php:101
+#: templates/_item_comment.inc.php:120
 msgid "from"
 msgstr "de"
 
-#: templates/_item_comment.inc.php:182
+#: templates/_item_comment.inc.php:193
 msgid " at "
 msgstr " je "
 
-#: templates/_item_comment_form.inc.php:288
+#: templates/_item_comment_form.inc.php:282
 msgid "<a href=\"http://en.wikipedia.org/wiki/Markdown\">Markdown</a> is enabled."
 msgstr "<a href=\"http://bagateloj.org/post/6209552185\">Markdown</a> estas aktiva."
 
-#: templates/_item_comment_form.inc.php:296
+#: templates/_item_comment_form.inc.php:290
 msgid "<a href=\"http://en.wikipedia.org/wiki/BBCode\">BBCode</a> is enabled."
 msgstr "<a href=\"http://en.wikipedia.org/wiki/BBCode\" hreflang=\"en\">BBCode</a> estas aktiva."
 
-#: templates/_sidebar.inc.php:50 templates/_sidebar.inc.php:56
+#: templates/_sidebar.inc.php:49 templates/_sidebar.inc.php:55
 #, php-format
 msgid "%s <span class=\"button-sf\">Feed</span>"
 msgstr "%s<span class=\"button-sf\">-fluo</span>"
 
-#: templates/_sidebar.inc.php:50 templates/_sidebar.inc.php:56
+#: templates/_sidebar.inc.php:49 templates/_sidebar.inc.php:55
 #, php-format
 msgid "%s Feed"
 msgstr "%s-fluo"
 
-#: templates/_sidebar.inc.php:65
-msgid "Valid XHTML"
-msgstr "Valida XHTML"
-
-#: templates/_sidebar.inc.php:69
+#: templates/_sidebar.inc.php:61
 msgid "Share on Facebook"
 msgstr "Konigi en Facebook"
 
-#: templates/_sidebar.inc.php:70
+#: templates/_sidebar.inc.php:62
 msgid "Share on Google+"
 msgstr "Konigi en Google+"
 
-#: templates/_sidebar.inc.php:71
+#: templates/_sidebar.inc.php:63
 msgid "Share on Twitter"
 msgstr "Konigi en Twitter"
 
-#: templates/_sidebar.inc.php:251
-msgid "Select a pod to use above or enter one below."
-msgstr "Elekti guŝon uzotan ĉi-supre aŭ enmeti alian ĉi-malsupre."
+#: templates/_sidebar.inc.php:136
+msgid "Pod URL: "
+msgstr "URL de guŝo: "
 
-#: templates/_sidebar.inc.php:269
+#: templates/_sidebar.inc.php:149
 msgid "Diaspora* user name"
 msgstr "Diaspora*-salutnomo"
 
-#: templates/_sidebar.inc.php:276
+#: templates/_sidebar.inc.php:156
 msgid "Diaspora* password"
 msgstr "Diaspora*-pasworto"
 
-#: templates/_sidebar.inc.php:282
+#: templates/_sidebar.inc.php:162
 msgid "Diaspora* aspects"
 msgstr "Diaspora*-aspektoj"
 
-#: templates/_sidebar.inc.php:296 templates/_sidebar.inc.php:297
+#: templates/_sidebar.inc.php:176 templates/_sidebar.inc.php:177
 msgid "Share on Diaspora*"
 msgstr "Konigi en Diaspora*"
 
-#: templates/_sidebar.inc.php:321
+#: templates/_sidebar.inc.php:199
 msgid "Back-office"
 msgstr "Stirilo"

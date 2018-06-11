@@ -1,14 +1,14 @@
 # edk - Language file
-# Copyright (C) 2017 Keith Bowes
+# Copyright (C) 2018 Keith
 # This file is distributed under the same license as the edk package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: edk 0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-01 21:37-0500\n"
+"POT-Creation-Date: 2018-06-11 13:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,7 +68,7 @@ msgstr ""
 msgid " by <a href=\"%s\">%s</a> on %s at %s %s %s"
 msgstr ""
 
-#: templates/_funcs.inc.php:368
+#: templates/_funcs.inc.php:272
 #, php-format
 msgid "<div>Powered by <cite><a href=\"http://www.duckduckgo.com/?q=!+%1$s\">%1$s</a> %2$s</cite>.</div>"
 msgstr ""
@@ -89,101 +89,97 @@ msgstr ""
 msgid "Transitional Look"
 msgstr ""
 
-#: templates/_html_header.inc.php:216
+#: templates/_html_header.inc.php:155
 msgid "Please leave this for stats"
 msgstr ""
 
-#: templates/_html_header.inc.php:231
+#: templates/_html_header.inc.php:169
 msgid "GNU General Public License Version 3"
 msgstr ""
 
-#: templates/_html_header.inc.php:231
+#: templates/_html_header.inc.php:169
 msgid "https://www.gnu.org/licenses/lgpl-3.0.en.html"
 msgstr ""
 
-#: templates/_html_header.inc.php:237
+#: templates/_html_header.inc.php:175
 msgid "Canonical Permalink"
 msgstr ""
 
-#: templates/_html_header.inc.php:238
+#: templates/_html_header.inc.php:176
 msgid "Shortened Permalink"
 msgstr ""
 
-#: templates/_html_header.inc.php:243
+#: templates/_html_header.inc.php:179
 msgid "Main Content"
 msgstr ""
 
-#: templates/_html_header.inc.php:244
+#: templates/_html_header.inc.php:180
 msgid "Menu"
 msgstr ""
 
-#: templates/_item_comment.inc.php:95
+#: templates/_item_comment.inc.php:114
 #, php-format
 msgid " (in response to <a href=\"%s\">%s</a>)"
 msgstr ""
 
-#: templates/_item_comment.inc.php:101
+#: templates/_item_comment.inc.php:120
 msgid "from"
 msgstr ""
 
-#: templates/_item_comment.inc.php:182
+#: templates/_item_comment.inc.php:193
 msgid " at "
 msgstr ""
 
-#: templates/_item_comment_form.inc.php:288
+#: templates/_item_comment_form.inc.php:282
 msgid "<a href=\"http://en.wikipedia.org/wiki/Markdown\">Markdown</a> is enabled."
 msgstr ""
 
-#: templates/_item_comment_form.inc.php:296
+#: templates/_item_comment_form.inc.php:290
 msgid "<a href=\"http://en.wikipedia.org/wiki/BBCode\">BBCode</a> is enabled."
 msgstr ""
 
-#: templates/_sidebar.inc.php:50 templates/_sidebar.inc.php:56
+#: templates/_sidebar.inc.php:49 templates/_sidebar.inc.php:55
 #, php-format
 msgid "%s <span class=\"button-sf\">Feed</span>"
 msgstr ""
 
-#: templates/_sidebar.inc.php:50 templates/_sidebar.inc.php:56
+#: templates/_sidebar.inc.php:49 templates/_sidebar.inc.php:55
 #, php-format
 msgid "%s Feed"
 msgstr ""
 
-#: templates/_sidebar.inc.php:65
-msgid "Valid XHTML"
-msgstr ""
-
-#: templates/_sidebar.inc.php:69
+#: templates/_sidebar.inc.php:61
 msgid "Share on Facebook"
 msgstr ""
 
-#: templates/_sidebar.inc.php:70
+#: templates/_sidebar.inc.php:62
 msgid "Share on Google+"
 msgstr ""
 
-#: templates/_sidebar.inc.php:71
+#: templates/_sidebar.inc.php:63
 msgid "Share on Twitter"
 msgstr ""
 
-#: templates/_sidebar.inc.php:251
-msgid "Select a pod to use above or enter one below."
+#: templates/_sidebar.inc.php:136
+msgid "Pod URL: "
 msgstr ""
 
-#: templates/_sidebar.inc.php:269
+#: templates/_sidebar.inc.php:149
 msgid "Diaspora* user name"
 msgstr ""
 
-#: templates/_sidebar.inc.php:276
+#: templates/_sidebar.inc.php:156
 msgid "Diaspora* password"
 msgstr ""
 
-#: templates/_sidebar.inc.php:282
+#: templates/_sidebar.inc.php:162
 msgid "Diaspora* aspects"
 msgstr ""
 
-#: templates/_sidebar.inc.php:296 templates/_sidebar.inc.php:297
+#: templates/_sidebar.inc.php:176 templates/_sidebar.inc.php:177
 msgid "Share on Diaspora*"
 msgstr ""
 
-#: templates/_sidebar.inc.php:321
+#: templates/_sidebar.inc.php:199
 msgid "Back-office"
 msgstr ""
