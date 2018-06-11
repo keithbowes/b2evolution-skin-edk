@@ -267,27 +267,10 @@ echo '<div id="form_p' . $Item->ID . '">';
 	// set b2evoCanvas for plugins
 	echo '<script type="text/javascript">var b2evoCanvas = document.getElementById( "'.$dummy_fields[ 'content' ].'" );</script>';
 
-	if (!empty($comment_allowed_tags) && $Blog->get_setting('allow_html_comment') === '1')
-	{
-		echo '<div class="allowed-tags fieldset form-control">';
-		echo __('Allowed XHTML tags') . ': ';
-		echo str_replace('<', '&lt;', str_replace('>', '&gt;', str_replace('><', '>, <', $comment_allowed_tags)));
-		echo "</div>\n\n";
-	}
-
-
 	if (($plug = $Plugins->get_by_classname('markdown_plugin')) !== FALSE && 'enabled' == $plug->status)
 	{
 		echo '<div class="allowed-tags fieldset form-control">';
 		echo $Skin->T_('<a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> is enabled.');
-		echo "</div>\n\n";
-	}
-
-	if (($plug = $Plugins->get_by_classname('bbcode_plugin')) !== FALSE && 'enabled' == $plug->status)
-	{
-		echo($plug->UserSettings->db_table_name);
-		echo '<div class="allowed-tags fieldset form-control">';
-		echo $Skin->T_('<a href="http://en.wikipedia.org/wiki/BBCode">BBCode</a> is enabled.');
 		echo "</div>\n\n";
 	}
 

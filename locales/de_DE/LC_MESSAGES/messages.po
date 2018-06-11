@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: b 2e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-11 14:10-0400\n"
-"PO-Revision-Date: 2018-06-11 14:11-0400\n"
+"POT-Creation-Date: 2018-06-11 15:06-0400\n"
+"PO-Revision-Date: 2018-06-11 15:06-0400\n"
 "Last-Translator: Keith <keith@localhost>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -131,13 +131,9 @@ msgstr "von"
 msgid " at "
 msgstr " an "
 
-#: templates/_item_comment_form.inc.php:282
+#: templates/_item_comment_form.inc.php:273
 msgid "<a href=\"http://en.wikipedia.org/wiki/Markdown\">Markdown</a> is enabled."
 msgstr "<a href=\"http://de.wikipedia.org/wiki/Markdown\">Markdown</a> ist aktiviert."
-
-#: templates/_item_comment_form.inc.php:290
-msgid "<a href=\"http://en.wikipedia.org/wiki/BBCode\">BBCode</a> is enabled."
-msgstr "<a href=\"http://de.wikipedia.org/wiki/BBCode\">BBCode</a> ist aktiviert."
 
 #: templates/_navbar.inc.php:49 templates/_navbar.inc.php:55
 #, php-format

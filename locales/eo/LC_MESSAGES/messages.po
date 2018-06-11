@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: b 2e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-11 14:10-0400\n"
-"PO-Revision-Date: 2018-06-11 14:11-0400\n"
+"POT-Creation-Date: 2018-06-11 15:06-0400\n"
+"PO-Revision-Date: 2018-06-11 15:07-0400\n"
 "Last-Translator: Keith Bowes <keith@localhost>\n"
 "Language-Team: Esperanto\n"
 "Language: eo \n"
@@ -125,13 +125,9 @@ msgstr "de"
 msgid " at "
 msgstr " je "
 
-#: templates/_item_comment_form.inc.php:282
+#: templates/_item_comment_form.inc.php:273
 msgid "<a href=\"http://en.wikipedia.org/wiki/Markdown\">Markdown</a> is enabled."
-msgstr "<a href=\"http://bagateloj.org/post/6209552185\">Markdown</a> estas aktiva."
-
-#: templates/_item_comment_form.inc.php:290
-msgid "<a href=\"http://en.wikipedia.org/wiki/BBCode\">BBCode</a> is enabled."
-msgstr "<a href=\"http://en.wikipedia.org/wiki/BBCode\" hreflang=\"en\">BBCode</a> estas aktiva."
+msgstr "<a href=\"https://web.archive.org/web/20111010193341/http://bagateloj.org/post/6209552185\">Markdown</a> estas aktiva."
 
 #: templates/_navbar.inc.php:49 templates/_navbar.inc.php:55
 #, php-format
