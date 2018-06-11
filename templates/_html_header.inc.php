@@ -168,27 +168,11 @@ $params = array_merge( array(
 
 	add_headline(sprintf('<link rel="jslicense" href="%s" title="%s" />', $Skin->T_('https://www.gnu.org/licenses/lgpl-3.0.en.html'), $Skin->T_('GNU General Public License Version 3')));
 
-	/* Hold this info in a variable instead of querying the DB multiple times */
-	$canonical_url = get_full_url(get_post_urltitle());
 	if ('single' == $disp)
 	{
-		add_headline(sprintf('<link rel="canonical" href="%s" title="%s" />%s', $canonical_url, $Skin->T_('Canonical Permalink'), "\n"));
+		add_headline(sprintf('<link rel="canonical" href="%s" title="%s" />%s', get_full_url(get_post_urltitle()), $Skin->T_('Canonical Permalink'), "\n"));
 		add_headline(sprintf('<link rel="shortlink" href="%s" title="%s" />%s', get_tinyurl(), $Skin->T_('Shortened Permalink'),  "\n"));
 	}
-
-	add_headline(sprintf('<link rel="bookmark" href="%s#content" title="%s" />', $canonical_url, $Skin->T_('Main Content')));
-	add_headline(sprintf('<link rel="bookmark" href="%s#menu" title="%s" />', $canonical_url, $Skin->T_('Menu')));
-
-if ('single' == $disp)
-		{
-  add_headline(sprintf('<link rel="bookmark" href="%s#comments" title="%s" />', $canonical_url, __('Comments')));
-		}
-  add_headline(sprintf('<link rel="top" href="%sdefault.php" title="%s" />', $baseurl, __('Go back to home page')));
-
-if ('posts' != $disp)
-{
-	add_headline(sprintf('<link rel="up" href="%s%s" title="%s" />', $baseurl, $Blog->siteurl, htmlspecialchars($Blog->name)));
-}
 else
 {
 foreach (get_other_blogs() as $blog)
