@@ -1,11 +1,11 @@
+article {
+  border: none;
+}
+
 body,
 #content,
 #skin_wrapper {
   overflow: visible;
-}
-
-div[role="article"] {
-  border: none;
 }
 
 #content {
@@ -22,7 +22,6 @@ div[role="article"] {
   display: none;
 }
 
-#eu_cookie_consent,
 #evo_toolbar {
   display: none !important;
 }

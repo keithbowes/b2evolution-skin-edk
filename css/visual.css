@@ -24,6 +24,13 @@ abbr {
   letter-spacing: .07em;
 }
 
+article,
+.result_content {
+  background-color: azure;
+  border: medium lightblue dotted;
+  margin: 0 0 1em 0;
+}
+
 blockquote {
   background-color: beige;
   border-left: medium solid #ccc;
@@ -39,13 +46,6 @@ body {
 cite {
   font-size: 90%;
   font-style: normal;
-}
-
-div[role="article"],
-.result_content {
-  background-color: azure;
-  border: medium lightblue dotted;
-  margin: 0 0 1em 0;
 }
 
 div.feedback_feed_msg {
@@ -162,11 +162,6 @@ table summary {
 
 #esf {
   margin-top: 0.2em;
-}
-
-#eu_cookie_consent {
-  padding: 0.8% 2.5% !important;
-  width: 95% !important;
 }
 
 #facebook {

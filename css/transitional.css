@@ -20,7 +20,7 @@ html,
   overflow: hidden;
 }
 
-body.disp_single [role="article"] {
+body.disp_single article {
   margin-top: 1em;
 }
 
@@ -139,26 +139,6 @@ input.search_field:hover {
 
 #diaspform * {
   white-space: normal !important;
-}
-
-#eu_cookie_consent {
-  border-width: 0 !important;
-  height: 20% !important;
-  overflow: hidden !important;
-  padding-bottom: 0 !important;
-  padding-top: 0 !important;
-}
-
-#eu_cookie_consent_container + #skin_wrapper #content {
-  height: 79.7%;
-}
-#eu_cookie_consent_container + #skin_wrapper #credit {
-  bottom: 20.3%;
-  height: 9.97%;
-}
-
-#eu_cookie_consent_container + #skin_wrapper #nav {
-  height: 69.9%;
 }
 
 #facebook {

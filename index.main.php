@@ -60,7 +60,7 @@ if ('single' == $disp)
 <?php
 }
 ?>
-	<div role="article" id="<?php $Item->anchor_id(); ?>" <?php printf('lang="%s"', locale_lang(FALSE)); ?>>
+	<article id="<?php $Item->anchor_id(); ?>" <?php printf('lang="%s"', locale_lang(FALSE)); ?>>
 <?php
 	$Item->locale_temp_switch();
 	printf('<h2 class="storytitle"><a rel="%4$s" href="%1$s"  title="%3$s">%2$s</a></h2>', $Item->get_single_url(), $Item->title, __('Permanent link to full entry'), 'bookmark');
@@ -94,7 +94,7 @@ if ('single' == $disp)
 		);
 ?>
 
-	</div>
+	</article>
 <?php
 
 skin_include( 'templates/_item_feedback.inc.php');
@@ -132,7 +132,7 @@ if ($MainList)
 
 ?>
 
-</section>
+</main>
 
 <?php
 	skin_include( 'templates/_navbar.inc.php' );

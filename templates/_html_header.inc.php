@@ -231,4 +231,4 @@ printf('%s<h1><a href="%s">%s</a></h1>', PHP_EOL, $Blog->dget('url'), $Blog->dge
 
 ?>
 
-<section id="content" role="main">
+<main id="content">

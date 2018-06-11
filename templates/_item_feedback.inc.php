@@ -37,8 +37,8 @@ $params = array_merge( array(
 		'comments_title_text'   => '',
 		'comment_list_start'    => "\n\n",
 		'comment_list_end'      => "\n\n",
-		'comment_start'         => '<div role="article" class="evo_comment panel panel-default">',
-		'comment_end'           => '</div>',
+		'comment_start'         => '<article class="evo_comment panel panel-default">',
+		'comment_end'           => '</article>',
 		'comment_post_display'	=> false,	// Do we want ot display the title of the post we're referring to?
 		'comment_post_before'   => '<h2 class="evo_comment_post_title">',
 		'comment_post_after'    => '</h2>',
@@ -52,10 +52,10 @@ $params = array_merge( array(
 		'comment_text_after'    => '</div>',
 		'comment_info_before'   => '<footer class="evo_comment_footer clear text-muted">',
 		'comment_info_after'    => '</footer></div>',
-		'preview_start'         => '<div role="article" class="evo_comment evo_comment__preview panel panel-warning" id="comment_preview">',
-		'preview_end'           => '</div>',
-		'comment_error_start'   => '<div role="article" class="evo_comment evo_comment__error panel panel-default" id="comment_error">',
-		'comment_error_end'     => '</div>',
+		'preview_start'         => '<article class="evo_comment evo_comment__preview panel panel-warning" id="comment_preview">',
+		'preview_end'           => '</article>',
+		'comment_error_start'   => '<article class="evo_comment evo_comment__error panel panel-default" id="comment_error">',
+		'comment_error_end'     => '</article>',
 		'comment_template'      => 'templates/_item_comment.inc.php',	// The template used for displaying individual comments (including preview)
 		'comment_image_size'    => 'fit-1280x720',
 		'author_link_text'      => 'auto', // avatar_name | avatar_login | only_avatar | name | login | nickname | firstname | lastname | fullname | preferredname

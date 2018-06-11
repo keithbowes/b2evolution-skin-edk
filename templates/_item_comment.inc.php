@@ -18,8 +18,8 @@ global $comment_template_counter;
 
 // Default params:
 $params = array_merge( array(
-		'comment_start'         => '<div role="article" class="evo_comment panel panel-default">',
-		'comment_end'           => '</div>',
+		'comment_start'         => '<article class="evo_comment panel panel-default">',
+		'comment_end'           => '</article>',
 		'comment_post_display'	=> false,	// Do we want ot display the title of the post we're referring to?
 		'comment_post_before'   => '<h3 class="evo_comment_post_title">',
 		'comment_post_after'    => '</h3>',

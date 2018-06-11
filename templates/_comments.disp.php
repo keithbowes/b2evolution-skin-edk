@@ -22,8 +22,8 @@ $params = array_merge( array(
 		'link_to'                 => 'userurl>userpage', // 'userpage' or 'userurl' or 'userurl>userpage' or 'userpage>userurl'
 		'display_comment_avatar'  => true,
 		'comment_avatar_position' => 'before_title', // 'before_title', 'before_text'
-		'comment_start'           => '<div role="article" class="evo_comment evo_content_block panel panel-default">',
-		'comment_end'             => '</div>',
+		'comment_start'           => '<article class="evo_comment evo_content_block panel panel-default">',
+		'comment_end'             => '</article>',
 		'comment_post_display'    => true,	// We want to display the title of the post we're referring to
 		'comment_post_before'     => '<div class="panel-heading"><h3 class="evo_comment_title panel-title pull-left">',
 		'comment_post_after'      => '</h3></div>',
