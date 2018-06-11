@@ -7,7 +7,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 
 $trans['de_DE'] = array(
 '__meta__' => array('format_version'=>1, 'charset'=>'utf-8'),
-'' => "Project-Id-Version: b 2e\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2018-06-11 13:27-0400\nPO-Revision-Date: 2018-06-11 13:26-0400\nLast-Translator: Keith <keith@localhost>\nLanguage-Team: German\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n",
+'' => "Project-Id-Version: b 2e\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2018-06-11 14:10-0400\nPO-Revision-Date: 2018-06-11 14:10-0400\nLast-Translator: Keith <keith@localhost>\nLanguage-Team: German\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n",
 '403 Forbidden' => '403 Verboten',
 '<p><a href="%s">%s</a> cannot resolve the requested URL.</p>' => '<p><a href="%s">%s</a> kann nicht die angeforderter URL auflösen.</p>',
 '404 Not Found' => '404 Nicht Gefunden',
@@ -42,9 +42,6 @@ $trans['de_DE'] = array(
 'Share on Google+' => 'Teilen auf Google+',
 'Share on Twitter' => 'Teilen auf Twitter',
 'Pod URL: ' => 'POD-URL: ',
-'Diaspora* user name' => 'Diaspora*-Benutzername',
-'Diaspora* password' => 'Diaspora*-Passwort',
-'Diaspora* aspects' => 'Diaspora*-Aspekte',
 'Share on Diaspora*' => 'Teilen auf Diaspora*',
 'Back-office' => 'Back-Office',
 

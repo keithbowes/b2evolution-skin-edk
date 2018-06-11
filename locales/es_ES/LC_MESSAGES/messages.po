@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: b 2e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-11 13:27-0400\n"
-"PO-Revision-Date: 2018-06-11 13:27-0400\n"
+"POT-Creation-Date: 2018-06-11 14:10-0400\n"
+"PO-Revision-Date: 2018-06-11 14:10-0400\n"
 "Last-Translator: Keith Bowes <keith@localhost>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES \n"
@@ -26,44 +26,44 @@ msgid "404 Not Found"
 msgstr "404 No Encontrado"
 
 # TRANS: Params: Start year, end year, license
-#: templates/_funcs.inc.php:71
+#: templates/_funcs.inc.php:46
 #, php-format
 msgid "(C) %1$d-%2$d under %3$s"
 msgstr "(C) %1$d-%2$d %3$s"
 
 # TRANS: Params: Start year, end year
-#: templates/_funcs.inc.php:73
+#: templates/_funcs.inc.php:48
 #, php-format
 msgid "(C) %1$d-%2$d"
 msgstr "(C) %1$d-%2$d"
 
-#: templates/_funcs.inc.php:134
+#: templates/_funcs.inc.php:109
 msgid "Attribution, Sharealike license"
 msgstr "Licencia de atribución, compartir igual"
 
-#: templates/_funcs.inc.php:134
+#: templates/_funcs.inc.php:109
 msgid "BY-SA"
 msgstr "BY-SA"
 
-#: templates/_funcs.inc.php:134
+#: templates/_funcs.inc.php:109
 msgid "C<span class=\"button-sf\">reative </span>C<span class=\"button-sf\">ommons</span>"
 msgstr "C<span class=\"button-sf\">reative </span>C<span class=\"button-sf\">ommons</span>"
 
-#: templates/_funcs.inc.php:134 templates/_funcs.inc.php:136
+#: templates/_funcs.inc.php:109 templates/_funcs.inc.php:111
 msgid "Creative Commons"
 msgstr "Licencia Creative Commons"
 
-#: templates/_funcs.inc.php:145
+#: templates/_funcs.inc.php:120
 msgid "Posted in "
 msgstr "Publicado en "
 
 # TRANS: The last two %s are icons
-#: templates/_funcs.inc.php:148
+#: templates/_funcs.inc.php:123
 #, php-format
 msgid " by <a href=\"%s\">%s</a> on %s at %s %s %s"
 msgstr " por <a href=\"%s\">%s</a> en %s a las %s %s %s"
 
-#: templates/_funcs.inc.php:272
+#: templates/_funcs.inc.php:247
 #, php-format
 msgid "<div>Powered by <cite><a href=\"http://www.duckduckgo.com/?q=!+%1$s\">%1$s</a> %2$s</cite>.</div>"
 msgstr "<div>Creado por <cite><a href=\"http://www.duckduckgo.com/?q=!+%1$s\">%1$s</a> %2$s</cite>.</div>"
@@ -133,48 +133,36 @@ msgstr "<a href=\"http://es.wikipedia.org/wiki/Markdown\">Markdown</a> está hab
 msgid "<a href=\"http://en.wikipedia.org/wiki/BBCode\">BBCode</a> is enabled."
 msgstr "<a href=\"http://es.wikipedia.org/wiki/BBCode\">BBCode</a> está habilitado."
 
-#: templates/_sidebar.inc.php:49 templates/_sidebar.inc.php:55
+#: templates/_navbar.inc.php:49 templates/_navbar.inc.php:55
 #, php-format
 msgid "%s <span class=\"button-sf\">Feed</span>"
 msgstr "<span class=\"button-sf\">Alimentación de</span> %s"
 
-#: templates/_sidebar.inc.php:49 templates/_sidebar.inc.php:55
+#: templates/_navbar.inc.php:49 templates/_navbar.inc.php:55
 #, php-format
 msgid "%s Feed"
 msgstr "Alimentación de %s"
 
-#: templates/_sidebar.inc.php:61
+#: templates/_navbar.inc.php:61
 msgid "Share on Facebook"
 msgstr "Compartir en Facebook"
 
-#: templates/_sidebar.inc.php:62
+#: templates/_navbar.inc.php:62
 msgid "Share on Google+"
 msgstr "Compartir en Google+"
 
-#: templates/_sidebar.inc.php:63
+#: templates/_navbar.inc.php:63
 msgid "Share on Twitter"
 msgstr "Compartir en Twitter"
 
-#: templates/_sidebar.inc.php:136
+#: templates/_navbar.inc.php:136
 msgid "Pod URL: "
 msgstr "URL del pod: "
 
-#: templates/_sidebar.inc.php:149
-msgid "Diaspora* user name"
-msgstr "Nombre de usuario de Diaspora*"
-
-#: templates/_sidebar.inc.php:156
-msgid "Diaspora* password"
-msgstr "Contraseña de Diaspora*"
-
-#: templates/_sidebar.inc.php:162
-msgid "Diaspora* aspects"
-msgstr "Aspectos de Diaspora*"
-
-#: templates/_sidebar.inc.php:176 templates/_sidebar.inc.php:177
+#: templates/_navbar.inc.php:148 templates/_navbar.inc.php:149
 msgid "Share on Diaspora*"
 msgstr "Compartir en Diaspora*"
 
-#: templates/_sidebar.inc.php:199
+#: templates/_navbar.inc.php:171
 msgid "Back-office"
 msgstr "Back-office"

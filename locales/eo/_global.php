@@ -7,7 +7,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 
 $trans['eo'] = array(
 '__meta__' => array('format_version'=>1, 'charset'=>'utf-8'),
-'' => "Project-Id-Version: b 2e\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2018-06-11 13:27-0400\nPO-Revision-Date: 2018-06-11 13:26-0400\nLast-Translator: Keith Bowes <keith@localhost>\nLanguage-Team: Esperanto\nLanguage: eo \nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n",
+'' => "Project-Id-Version: b 2e\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2018-06-11 14:10-0400\nPO-Revision-Date: 2018-06-11 14:10-0400\nLast-Translator: Keith Bowes <keith@localhost>\nLanguage-Team: Esperanto\nLanguage: eo \nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n",
 '403 Forbidden' => '403: Malpermesita',
 '<p><a href="%s">%s</a> cannot resolve the requested URL.</p>' => '<p><a href="%s">%s</a> ne povis solvi la petitan URL-on.</p>',
 '404 Not Found' => '404: Ne trovita',
@@ -42,9 +42,6 @@ $trans['eo'] = array(
 'Share on Google+' => 'Konigi en Google+',
 'Share on Twitter' => 'Konigi en Twitter',
 'Pod URL: ' => 'URL de guŝo: ',
-'Diaspora* user name' => 'Diaspora*-salutnomo',
-'Diaspora* password' => 'Diaspora*-pasworto',
-'Diaspora* aspects' => 'Diaspora*-aspektoj',
 'Share on Diaspora*' => 'Konigi en Diaspora*',
 'Back-office' => 'Stirilo',
 

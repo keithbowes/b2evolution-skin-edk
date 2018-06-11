@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edk 0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-11 13:27-0400\n"
+"POT-Creation-Date: 2018-06-11 14:10-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,44 +31,44 @@ msgid "404 Not Found"
 msgstr ""
 
 #. TRANS: Params: Start year, end year, license
-#: templates/_funcs.inc.php:71
+#: templates/_funcs.inc.php:46
 #, php-format
 msgid "(C) %1$d-%2$d under %3$s"
 msgstr ""
 
 #. TRANS: Params: Start year, end year
-#: templates/_funcs.inc.php:73
+#: templates/_funcs.inc.php:48
 #, php-format
 msgid "(C) %1$d-%2$d"
 msgstr ""
 
-#: templates/_funcs.inc.php:134
+#: templates/_funcs.inc.php:109
 msgid "Attribution, Sharealike license"
 msgstr ""
 
-#: templates/_funcs.inc.php:134
+#: templates/_funcs.inc.php:109
 msgid "BY-SA"
 msgstr ""
 
-#: templates/_funcs.inc.php:134
+#: templates/_funcs.inc.php:109
 msgid "C<span class=\"button-sf\">reative </span>C<span class=\"button-sf\">ommons</span>"
 msgstr ""
 
-#: templates/_funcs.inc.php:134 templates/_funcs.inc.php:136
+#: templates/_funcs.inc.php:109 templates/_funcs.inc.php:111
 msgid "Creative Commons"
 msgstr ""
 
-#: templates/_funcs.inc.php:145
+#: templates/_funcs.inc.php:120
 msgid "Posted in "
 msgstr ""
 
 #. TRANS: The last two %s are icons
-#: templates/_funcs.inc.php:148
+#: templates/_funcs.inc.php:123
 #, php-format
 msgid " by <a href=\"%s\">%s</a> on %s at %s %s %s"
 msgstr ""
 
-#: templates/_funcs.inc.php:272
+#: templates/_funcs.inc.php:247
 #, php-format
 msgid "<div>Powered by <cite><a href=\"http://www.duckduckgo.com/?q=!+%1$s\">%1$s</a> %2$s</cite>.</div>"
 msgstr ""
@@ -138,48 +138,36 @@ msgstr ""
 msgid "<a href=\"http://en.wikipedia.org/wiki/BBCode\">BBCode</a> is enabled."
 msgstr ""
 
-#: templates/_sidebar.inc.php:49 templates/_sidebar.inc.php:55
+#: templates/_navbar.inc.php:49 templates/_navbar.inc.php:55
 #, php-format
 msgid "%s <span class=\"button-sf\">Feed</span>"
 msgstr ""
 
-#: templates/_sidebar.inc.php:49 templates/_sidebar.inc.php:55
+#: templates/_navbar.inc.php:49 templates/_navbar.inc.php:55
 #, php-format
 msgid "%s Feed"
 msgstr ""
 
-#: templates/_sidebar.inc.php:61
+#: templates/_navbar.inc.php:61
 msgid "Share on Facebook"
 msgstr ""
 
-#: templates/_sidebar.inc.php:62
+#: templates/_navbar.inc.php:62
 msgid "Share on Google+"
 msgstr ""
 
-#: templates/_sidebar.inc.php:63
+#: templates/_navbar.inc.php:63
 msgid "Share on Twitter"
 msgstr ""
 
-#: templates/_sidebar.inc.php:136
+#: templates/_navbar.inc.php:136
 msgid "Pod URL: "
 msgstr ""
 
-#: templates/_sidebar.inc.php:149
-msgid "Diaspora* user name"
-msgstr ""
-
-#: templates/_sidebar.inc.php:156
-msgid "Diaspora* password"
-msgstr ""
-
-#: templates/_sidebar.inc.php:162
-msgid "Diaspora* aspects"
-msgstr ""
-
-#: templates/_sidebar.inc.php:176 templates/_sidebar.inc.php:177
+#: templates/_navbar.inc.php:148 templates/_navbar.inc.php:149
 msgid "Share on Diaspora*"
 msgstr ""
 
-#: templates/_sidebar.inc.php:199
+#: templates/_navbar.inc.php:171
 msgid "Back-office"
 msgstr ""

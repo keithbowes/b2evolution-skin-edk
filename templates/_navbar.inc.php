@@ -1,7 +1,7 @@
-<!-- begin sidebar -->
+<!-- begin navbar -->
 <?php
 	global $baseurl;
-	/* Make sure the sidebar uses the blog's locale insted of the locale of the bottom post */
+	/* Make sure the navbar uses the blog's locale insted of the locale of the bottom post */
 	locale_temp_switch($Blog->locale);
 ?>
 
@@ -11,7 +11,7 @@
 <ul>
 <?php
 		// Display container contents:
-		skin_container( _t('Sidebar'), array(
+		skin_container( _T('Navbar'), array(
 				// The following (optional) params will be used as defaults for widgets included in this container:
 				// This will enclose each widget in a block:
 				'block_start' => '<li class="$wi_class$">',
@@ -176,4 +176,4 @@ $diaform->end_form();
 </ul>
 
 </section>
-<!-- end sidebar -->
+<!-- end navbar -->

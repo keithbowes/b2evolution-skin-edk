@@ -135,6 +135,6 @@ if ($MainList)
 </section>
 
 <?php
-	skin_include( 'templates/_sidebar.inc.php' );
+	skin_include( 'templates/_navbar.inc.php' );
 	skin_include( 'templates/_html_footer.inc.php' );
 ?>
