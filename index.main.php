@@ -1,13 +1,6 @@
 <?php
 
 skin_init( $disp );
-
-if ($diaspora_pod = param('diaspora-pod'))
-{
-	global $diaspora_pod;
-	diaspora_share();
-}
-
 skin_include( 'templates/_html_header.inc.php' );
 
 display_if_empty();

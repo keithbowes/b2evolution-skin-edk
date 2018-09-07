@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edk 0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-11 15:06-0400\n"
+"POT-Creation-Date: 2018-09-07 16:20-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,44 +31,44 @@ msgid "404 Not Found"
 msgstr ""
 
 #. TRANS: Params: Start year, end year, license
-#: templates/_funcs.inc.php:46
+#: templates/_funcs.inc.php:36
 #, php-format
 msgid "(C) %1$d-%2$d under %3$s"
 msgstr ""
 
 #. TRANS: Params: Start year, end year
-#: templates/_funcs.inc.php:48
+#: templates/_funcs.inc.php:38
 #, php-format
 msgid "(C) %1$d-%2$d"
 msgstr ""
 
-#: templates/_funcs.inc.php:109
+#: templates/_funcs.inc.php:99
 msgid "Attribution, Sharealike license"
 msgstr ""
 
-#: templates/_funcs.inc.php:109
+#: templates/_funcs.inc.php:99
 msgid "BY-SA"
 msgstr ""
 
-#: templates/_funcs.inc.php:109
+#: templates/_funcs.inc.php:99
 msgid "C<span class=\"button-sf\">reative </span>C<span class=\"button-sf\">ommons</span>"
 msgstr ""
 
-#: templates/_funcs.inc.php:109 templates/_funcs.inc.php:111
+#: templates/_funcs.inc.php:99 templates/_funcs.inc.php:101
 msgid "Creative Commons"
 msgstr ""
 
-#: templates/_funcs.inc.php:120
+#: templates/_funcs.inc.php:110
 msgid "Posted in "
 msgstr ""
 
 #. TRANS: The last two %s are icons
-#: templates/_funcs.inc.php:123
+#: templates/_funcs.inc.php:113
 #, php-format
 msgid " by <a href=\"%s\">%s</a> on %s at %s %s %s"
 msgstr ""
 
-#: templates/_funcs.inc.php:247
+#: templates/_funcs.inc.php:237
 #, php-format
 msgid "<div>Powered by <cite><a href=\"http://www.duckduckgo.com/?q=!+%1$s\">%1$s</a> %2$s</cite>.</div>"
 msgstr ""
@@ -101,20 +101,12 @@ msgstr ""
 msgid "https://www.gnu.org/licenses/lgpl-3.0.en.html"
 msgstr ""
 
-#: templates/_html_header.inc.php:175
+#: templates/_html_header.inc.php:173
 msgid "Canonical Permalink"
 msgstr ""
 
-#: templates/_html_header.inc.php:176
+#: templates/_html_header.inc.php:174
 msgid "Shortened Permalink"
-msgstr ""
-
-#: templates/_html_header.inc.php:179
-msgid "Main Content"
-msgstr ""
-
-#: templates/_html_header.inc.php:180
-msgid "Menu"
 msgstr ""
 
 #: templates/_item_comment.inc.php:114
@@ -144,26 +136,6 @@ msgstr ""
 msgid "%s Feed"
 msgstr ""
 
-#: templates/_navbar.inc.php:61
-msgid "Share on Facebook"
-msgstr ""
-
-#: templates/_navbar.inc.php:62
-msgid "Share on Google+"
-msgstr ""
-
-#: templates/_navbar.inc.php:63
-msgid "Share on Twitter"
-msgstr ""
-
-#: templates/_navbar.inc.php:136
-msgid "Pod URL: "
-msgstr ""
-
-#: templates/_navbar.inc.php:148 templates/_navbar.inc.php:149
-msgid "Share on Diaspora*"
-msgstr ""
-
-#: templates/_navbar.inc.php:171
+#: templates/_navbar.inc.php:66
 msgid "Back-office"
 msgstr ""

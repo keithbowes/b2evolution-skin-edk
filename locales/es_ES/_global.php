@@ -7,7 +7,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 
 $trans['es_ES'] = array(
 '__meta__' => array('format_version'=>1, 'charset'=>'utf-8'),
-'' => "Project-Id-Version: b 2e\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2018-06-11 14:10-0400\nPO-Revision-Date: 2018-06-11 14:10-0400\nLast-Translator: Keith Bowes <keith@localhost>\nLanguage-Team: Spanish\nLanguage: es_ES \nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n",
+'' => "Project-Id-Version: b 2e\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2018-09-07 16:20-0400\nPO-Revision-Date: 2018-09-07 16:20-0400\nLast-Translator: Keith Bowes <keith@localhost>\nLanguage-Team: Spanish\nLanguage: es_ES \nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n",
 '403 Forbidden' => '403 Prohibido',
 '<p><a href="%s">%s</a> cannot resolve the requested URL.</p>' => '<p><a href="%s">%s</a> no pudo resolver el pedido URL.</p>',
 '404 Not Found' => '404 No Encontrado',
@@ -29,20 +29,12 @@ $trans['es_ES'] = array(
 'https://www.gnu.org/licenses/lgpl-3.0.en.html' => 'https://cdn.rawgit.com/LSLSpanish/translation_GPLv3_to_spanish/master/GPLv3-spanish.html',
 'Canonical Permalink' => 'Permalink canónico',
 'Shortened Permalink' => 'Permalink acortado',
-'Main Content' => 'Contendidos principales',
-'Menu' => 'Menú',
 ' (in response to <a href="%s">%s</a>)' => ' (en repuesta a <a href="%s">%s</a>)',
 'from' => 'por',
 ' at ' => ' a los ',
 '<a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> is enabled.' => '<a href="http://es.wikipedia.org/wiki/Markdown">Markdown</a> está habilitado.',
-'<a href="http://en.wikipedia.org/wiki/BBCode">BBCode</a> is enabled.' => '<a href="http://es.wikipedia.org/wiki/BBCode">BBCode</a> está habilitado.',
 '%s <span class="button-sf">Feed</span>' => '<span class="button-sf">Alimentación de</span> %s',
 '%s Feed' => 'Alimentación de %s',
-'Share on Facebook' => 'Compartir en Facebook',
-'Share on Google+' => 'Compartir en Google+',
-'Share on Twitter' => 'Compartir en Twitter',
-'Pod URL: ' => 'URL del pod: ',
-'Share on Diaspora*' => 'Compartir en Diaspora*',
 'Back-office' => 'Back-office',
 
 );

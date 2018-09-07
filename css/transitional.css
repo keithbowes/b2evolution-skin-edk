@@ -137,14 +137,6 @@ input.search_field:hover {
   white-space: nowrap;
 }
 
-#diaspform * {
-  white-space: normal !important;
-}
-
-#facebook {
-  margin-top: -0.1em;
-}
-
 #menu {
   margin: 0;
   padding-top: 0.5em !important;

@@ -7,7 +7,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 
 $trans['eo'] = array(
 '__meta__' => array('format_version'=>1, 'charset'=>'utf-8'),
-'' => "Project-Id-Version: b 2e\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2018-06-11 14:10-0400\nPO-Revision-Date: 2018-06-11 14:10-0400\nLast-Translator: Keith Bowes <keith@localhost>\nLanguage-Team: Esperanto\nLanguage: eo \nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n",
+'' => "Project-Id-Version: b 2e\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2018-09-07 16:20-0400\nPO-Revision-Date: 2018-09-07 16:19-0400\nLast-Translator: Keith Bowes <keith@localhost>\nLanguage-Team: Esperanto\nLanguage: eo \nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n",
 '403 Forbidden' => '403: Malpermesita',
 '<p><a href="%s">%s</a> cannot resolve the requested URL.</p>' => '<p><a href="%s">%s</a> ne povis solvi la petitan URL-on.</p>',
 '404 Not Found' => '404: Ne trovita',
@@ -29,20 +29,12 @@ $trans['eo'] = array(
 'https://www.gnu.org/licenses/lgpl-3.0.en.html' => '/eo/programado/gpl3.html',
 'Canonical Permalink' => 'Kanona daŭrligilo',
 'Shortened Permalink' => 'Mallongigita daŭrligilo',
-'Main Content' => 'Ĉefa enhavo',
-'Menu' => 'Menuo',
 ' (in response to <a href="%s">%s</a>)' => ' (responde al <a href="%s">%s</a>)',
 'from' => 'de',
 ' at ' => ' je ',
-'<a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> is enabled.' => '<a href="http://bagateloj.org/post/6209552185">Markdown</a> estas aktiva.',
-'<a href="http://en.wikipedia.org/wiki/BBCode">BBCode</a> is enabled.' => '<a href="http://en.wikipedia.org/wiki/BBCode" hreflang="en">BBCode</a> estas aktiva.',
+'<a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> is enabled.' => '<a href="https://web.archive.org/web/20111010193341/http://bagateloj.org/post/6209552185">Markdown</a> estas aktiva.',
 '%s <span class="button-sf">Feed</span>' => '%s<span class="button-sf">-fluo</span>',
 '%s Feed' => '%s-fluo',
-'Share on Facebook' => 'Konigi en Facebook',
-'Share on Google+' => 'Konigi en Google+',
-'Share on Twitter' => 'Konigi en Twitter',
-'Pod URL: ' => 'URL de guŝo: ',
-'Share on Diaspora*' => 'Konigi en Diaspora*',
 'Back-office' => 'Stirilo',
 
 );

@@ -1,5 +1,5 @@
 * {
-  font-family: 'Helvetica Neue', 'Lucida Grande', 'Lucida Sans Unicode', Malayalam, 'Mukti Narrow', Verdana, sans-serif;
+  font-family: Verdana, 'DejaVu Sans', 'Lucida Grande', sans-serif;
   font-size: 104%;
 }
 
@@ -63,7 +63,7 @@ h1 {
 h2 {
   border-bottom: thin dotted #ccc;
   color: inherit;
-  font: 95% Arial, Helvetica, serif;
+  font: 95% Arial, 'Liberation Sans', 'Helvetica Neue', Helvetica, sans-serif;
   letter-spacing: 0.2em;
   margin: 0.6em 0 0.1em 0;
   padding-bottom: 0.1em;
@@ -71,7 +71,7 @@ h2 {
 
 h3 {
   border-bottom: dotted thin;
-  font-family: Arial, serif;
+  font-family: Arial, 'Liberation Sans', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 300;
   margin-top: 0;
   text-align: left;
@@ -164,28 +164,8 @@ table summary {
   margin-top: 0.2em;
 }
 
-#facebook {
-  background-color: #3b5998 !important;
-  border-color: black;
-  border-radius: 0.2em;
-  border-style: solid;
-  border-width: thin 0;
-  color: #ebeef4 !important;
-  height: 1em;
-  line-height: 0.9em;
-  padding: 0.2em 0.2em 0 0.2em;
-  width: 0.8em;
-}
-
 #firstitem {
   float: left;
-}
-
-#gplus {
-  background-color: #d1402e !important;
-  color: #f9e6e3 !important;
-  padding: 0 0.2em 0.2em 0.2em;
-  width: 0.8em;
 }
 
 #lastitem {
@@ -283,30 +263,6 @@ table summary {
   padding: 0.5em;
 }
 
-#twitter {
-  background-color: #777 !important;
-  border-color: black;
-  border-radius: 0.2em;
-  border-style: solid;
-  border-width: thin 0;
-  color: #3bfdde !important;
-  height: 1em;
-  line-height: 0.9em;
-  padding: 0.2em 0.4em 0 0.2em;
-  width: 0.6em;
-}
-
-#valid {
-  background-color: #fb3 !important;
-  border-bottom: 0.15em solid #4a4a4a;
-  border-left: 0.12em solid #cecece;
-  border-right: 0.15em solid #4a4a4a;
-  border-top: 0.12em solid #cecece;
-  color: black !important;
-  font-family: Arial, Helvetica, serif;
-  padding: 0.1em 0.5em;
-}
-
 .bCalendarTable {
   background-color: transparent;
   border: none !important;
@@ -372,36 +328,6 @@ table summary {
 .help-inline {
   display: block;
   clear: right;
-}
-
-.dia {
-  background-color: #505050 !important;
-  border: none;
-  border-radius: 0.4em;
-  color: white !important;
-  cursor: pointer;
-  line-height: 0.6em;
-  padding: 0.2em 0 0 0;
-  vertical-align: top;
-}
-
-.diahide *:not(#diaspora) {
-  display: none;
-}
-
-.diashow {
-  background-color: silver;
-  color: black;
-  display: block;
-  height: 50%;
-  left: 25%;
-  position: fixed;
-  top: 25%;
-  width: 50%;
-}
-
-.diashow .form-control {
-  float: left;
 }
 
 .evo_post__full_text,

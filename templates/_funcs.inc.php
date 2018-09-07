@@ -15,16 +15,6 @@ function _t($str)
 	return NT_($str);
 }
 
-function diaspora_share()
-{
-	global $cookie_path, $diaspora_pod;
-
-	$nine_weeks = time() + 9 * 7 * 24 * 60 * 60;
-	setcookie('Diaspora-Pod', $diaspora_pod,  $nine_weeks, $cookie_path);
-	header('Location: ' . $diaspora_pod . '/bookmarklet?url=' . param('diaspora-url') . '&title=' . param('diaspora-title'));
-	die();
-}
-
 function get_copyright($params = array())
 {
 	global $Blog, $Skin;

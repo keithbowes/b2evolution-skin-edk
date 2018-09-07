@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: b 2e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-11 15:06-0400\n"
-"PO-Revision-Date: 2018-06-11 15:07-0400\n"
+"POT-Creation-Date: 2018-09-07 16:20-0400\n"
+"PO-Revision-Date: 2018-09-07 16:19-0400\n"
 "Last-Translator: Keith Bowes <keith@localhost>\n"
 "Language-Team: Esperanto\n"
 "Language: eo \n"
@@ -26,44 +26,44 @@ msgid "404 Not Found"
 msgstr "404: Ne trovita"
 
 # TRANS: Params: Start year, end year, license
-#: templates/_funcs.inc.php:46
+#: templates/_funcs.inc.php:36
 #, php-format
 msgid "(C) %1$d-%2$d under %3$s"
 msgstr "Kopirajto (C) %1$d ĝis %2$d laŭ %3$s"
 
 # TRANS: Params: Start year, end year
-#: templates/_funcs.inc.php:48
+#: templates/_funcs.inc.php:38
 #, php-format
 msgid "(C) %1$d-%2$d"
 msgstr "Kopirajto (C) %1$d ĝis %2$d"
 
-#: templates/_funcs.inc.php:109
+#: templates/_funcs.inc.php:99
 msgid "Attribution, Sharealike license"
 msgstr "Atribua, rajtoceda permesilo"
 
-#: templates/_funcs.inc.php:109
+#: templates/_funcs.inc.php:99
 msgid "BY-SA"
 msgstr "BY-SA"
 
-#: templates/_funcs.inc.php:109
+#: templates/_funcs.inc.php:99
 msgid "C<span class=\"button-sf\">reative </span>C<span class=\"button-sf\">ommons</span>"
 msgstr "K<span class=\"button-sf\">rea </span>K<span class=\"button-sf\">omunaĵo</span>"
 
-#: templates/_funcs.inc.php:109 templates/_funcs.inc.php:111
+#: templates/_funcs.inc.php:99 templates/_funcs.inc.php:101
 msgid "Creative Commons"
 msgstr "Permesilo Krea Komunaĵo"
 
-#: templates/_funcs.inc.php:120
+#: templates/_funcs.inc.php:110
 msgid "Posted in "
 msgstr "Afiŝita en "
 
 # TRANS: The last two %s are icons
-#: templates/_funcs.inc.php:123
+#: templates/_funcs.inc.php:113
 #, php-format
 msgid " by <a href=\"%s\">%s</a> on %s at %s %s %s"
 msgstr " de <a href=\"%s\">%s</a> je %s je %s %s %s"
 
-#: templates/_funcs.inc.php:247
+#: templates/_funcs.inc.php:237
 #, php-format
 msgid "<div>Powered by <cite><a href=\"http://www.duckduckgo.com/?q=!+%1$s\">%1$s</a> %2$s</cite>.</div>"
 msgstr "<div>Kreita pere de <cite><a href=\"http://www.duckduckgo.com/?q=!+%1$s\">%1$s</a> %2$s</cite>.</div>"
@@ -96,21 +96,13 @@ msgstr "Eldono 3 de la Ĝenerala Publika Permesilo de GNU"
 msgid "https://www.gnu.org/licenses/lgpl-3.0.en.html"
 msgstr "/eo/programado/gpl3.html"
 
-#: templates/_html_header.inc.php:175
+#: templates/_html_header.inc.php:173
 msgid "Canonical Permalink"
 msgstr "Kanona daŭrligilo"
 
-#: templates/_html_header.inc.php:176
+#: templates/_html_header.inc.php:174
 msgid "Shortened Permalink"
 msgstr "Mallongigita daŭrligilo"
-
-#: templates/_html_header.inc.php:179
-msgid "Main Content"
-msgstr "Ĉefa enhavo"
-
-#: templates/_html_header.inc.php:180
-msgid "Menu"
-msgstr "Menuo"
 
 #: templates/_item_comment.inc.php:114
 #, php-format
@@ -139,26 +131,6 @@ msgstr "%s<span class=\"button-sf\">-fluo</span>"
 msgid "%s Feed"
 msgstr "%s-fluo"
 
-#: templates/_navbar.inc.php:61
-msgid "Share on Facebook"
-msgstr "Konigi en Facebook"
-
-#: templates/_navbar.inc.php:62
-msgid "Share on Google+"
-msgstr "Konigi en Google+"
-
-#: templates/_navbar.inc.php:63
-msgid "Share on Twitter"
-msgstr "Konigi en Twitter"
-
-#: templates/_navbar.inc.php:136
-msgid "Pod URL: "
-msgstr "URL de guŝo: "
-
-#: templates/_navbar.inc.php:148 templates/_navbar.inc.php:149
-msgid "Share on Diaspora*"
-msgstr "Konigi en Diaspora*"
-
-#: templates/_navbar.inc.php:171
+#: templates/_navbar.inc.php:66
 msgid "Back-office"
 msgstr "Stirilo"
