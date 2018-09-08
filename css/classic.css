@@ -16,8 +16,14 @@
   font-family: 'Comic Sans MS', TSCu_Comic, Geneva, fantasy;
 }
 
+body,
+html {
+  overflow: hidden;
+}
+
 #content {
   left: 0;
+  overflow: auto;
 }
 
 #credit {
