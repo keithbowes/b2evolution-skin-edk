@@ -17,7 +17,7 @@ body,
 html,
 #skin_wrapper {
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 
 body.disp_single article {
@@ -101,11 +101,8 @@ input.search_field:hover {
   text-align: left;
 }
 
-#content,
-#credit,
-#nav {
+#content {
   position: absolute;
-  overflow: auto;
 }
 
 #content,
@@ -118,6 +115,12 @@ input.search_field:hover {
   height: 10%;
   left: 0;
   width: 23.5%;
+}
+
+#credit,
+#nav {
+  overflow: auto;
+  position: fixed;
 }
 
 #credit,
