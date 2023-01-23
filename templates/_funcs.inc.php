@@ -39,7 +39,7 @@ function get_copyright($params = array())
 	);
 
 	$func = $params['display'] ? 'printf' : 'sprintf';
-	return $func($fmt, strftime('%Y', $first_item['post_datestart']), strftime('%Y'), get_license(array('display' => FALSE)));
+	return $func($fmt, date('Y', $first_item['post_datestart']), date('Y'), get_license(array('display' => FALSE)));
 }
 
 /* Get the DB info about the first or last item of the current blog.
@@ -51,7 +51,13 @@ function get_copyright($params = array())
 function get_item($dir)
 {
 	global $Blog, $DB, $Item;
-	$blogid = is_object($Item) && $Item->blog_ID ? $Item->blog_ID : is_object($Blog) && $Blog->ID ? $Blog->ID : -1;
+	if (is_object($Item) && $Item->blog_ID)
+		$blogid=$Item->blog_ID;
+	elseif (is_object($Blog) && $Blog->ID)
+		$blogid=$Blog->ID;
+	else
+		$Blogid=-1;
+
 	$blogslug = $Item ? $Item->urltitle : '';
 	$categorytablename = is_object($Item) && is_object($Item->main_Chapter) ? $Item->main_Chapter->dbtablename : 'T_categories';
 	$itemtablename = $Item ? $Item->dbtablename : 'T_items__item';
@@ -139,7 +145,7 @@ function get_post_urltitle($dir = '', $row = 0)
 {
 	global $Blog, $DB, $Item;
 
-	$blogid = is_object($Item) ? $Item->get_blog_ID() : is_object($Blog) ? $Blog->ID : -1;
+	$blogid = is_object($Item) ? $Item->get_blog_ID() : (is_object($Blog) ? $Blog->ID : -1);
 	$blogslug = is_object($Item) ? $Item->urltitle : '';
 	$categorytablename = is_object($Item) && is_object($Item->main_Chapter) ? $Item->main_Chapter->dbtablename : 'T_categories';
 	$itemtablename = is_object($Item) && isset($Item->dbtablename) ? $Item->dbtablename : 'T_items__item';
@@ -174,13 +180,13 @@ function get_post_urltitle($dir = '', $row = 0)
 			// Do nothing
 			break;
 		case 'y':
-			$item_data['post_urltitle'] = strftime('%Y/', $item_data['post_datestart']) . $item_data['post_urltitle'];
+			$item_data['post_urltitle'] = date('Y/', $item_data['post_datestart']) . $item_data['post_urltitle'];
 			break;
 		case 'ym':
-			$item_data['post_urltitle'] = strftime('%Y/%m/', $item_data['post_datestart']) . $item_data['post_urltitle'];
+			$item_data['post_urltitle'] = date('Y/m/', $item_data['post_datestart']) . $item_data['post_urltitle'];
 			break;
 		case 'ymd':
-			$item_data['post_urltitle'] = strftime('%Y/%m/%d/', $item_data['post_datestart']) . $item_data['post_urltitle'];
+			$item_data['post_urltitle'] = date('Y/m/d/', $item_data['post_datestart']) . $item_data['post_urltitle'];
 			break;
 		case 'subchap':
 			$item_data['post_urltitle'] = $cat_data['cat_name'] . '/' . $item_data['post_urltitle'];
