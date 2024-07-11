@@ -1,7 +1,7 @@
 <!-- begin navbar -->
 <?php
 	global $baseurl;
-	/* Make sure the navbar uses the blog's locale insted of the locale of the bottom post */
+	/* Make sure the navbar uses the blog's locale instead of the locale of the bottom post */
 	locale_temp_switch($Blog->locale);
 ?>
 

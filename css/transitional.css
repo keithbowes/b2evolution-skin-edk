@@ -70,20 +70,31 @@ form.evo_comment legend {
   padding: 0.73em;
 }
 
-input.search_field {
+#SearchForm {
+  overflow: auto;
+}
+
+#SearchForm input#s {
   background-color: orange;
   border: thin #999 solid;
   color: navy;
-  padding: 0;
-  width: 70% !important;
+  margin: auto;
 }
 
-input.search_field:focus {
+#SearchForm input#s:focus {
   background-color: darkorange !important;
 }
 
-input.search_field:hover {
+#SearchForm input#s:hover {
   background-color: red;
+}
+
+#SearchForm input[type=submit] {
+  margin: 1.5em 25% 0 25%;
+}
+
+#SearchForm :not(div):not(.input-group *) {
+  display: none;
 }
 
 #content {
